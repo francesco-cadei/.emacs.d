@@ -1,0 +1,10 @@
+*
+
+!.gitignore
+!init.el
+!LICENSE.txt
+
+!settings/
+!settings/*
+!languages/
+!languages/*
