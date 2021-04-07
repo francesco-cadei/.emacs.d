@@ -9,6 +9,8 @@
 
 (setq delete-by-moving-to-trash t)
 (defalias 'yes-or-no-p 'y-or-n-p)
+(setq kill-buffer-query-functions nil)
+(setq confirm-kill-processes nil)
 
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (setq browse-url-browser-function 'browse-url-firefox)
