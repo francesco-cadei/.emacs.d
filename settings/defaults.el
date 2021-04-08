@@ -16,3 +16,4 @@
 (setq browse-url-browser-function 'browse-url-firefox)
 
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
+(global-whitespace-mode)

@@ -22,4 +22,3 @@
   ("C-x j" . 'counsel-git-grep)
   ("C-h f" . 'counsel-describe-function)
   ("C-h v" . 'counsel-describe-variable))
-
