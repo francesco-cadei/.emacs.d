@@ -19,4 +19,5 @@
 
 (require 'whitespace)
 (delete 'lines whitespace-style)
+(delete 'empty whitespace-style)
 (global-whitespace-mode)
