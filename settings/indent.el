@@ -1,2 +1,4 @@
 (use-package aggressive-indent
-  :config (global-aggressive-indent-mode))
+  :config
+  (add-to-list 'aggressive-indent-excluded-modes 'haskell-mode)
+  (global-aggressive-indent-mode))
