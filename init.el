@@ -1,9 +1,9 @@
 (setq package-enable-at-startup nil)
 
+(load-file "~/.emacs.d/settings/packages.el")
 (load-file "~/.emacs.d/settings/defaults.el")
 (load-file "~/.emacs.d/settings/dired.el")
 
-(load-file "~/.emacs.d/settings/packages.el")
 (load-file "~/.emacs.d/settings/minibuffer.el")
 (load-file "~/.emacs.d/settings/buffers-management.el")
 (load-file "~/.emacs.d/settings/git.el")
