@@ -1,6 +1,7 @@
 (require 'org)
 (setq org-startup-indented t)
 (setq org-startup-folded nil)
+(add-hook 'org-mode-hook 'linum-mode)
 (add-hook 'org-mode-hook 'visual-line-mode)
 
 (setq org-src-tab-acts-natively t)

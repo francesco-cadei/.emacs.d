@@ -15,6 +15,9 @@
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (setq browse-url-browser-function 'browse-url-firefox)
 
+(add-hook 'prog-mode-hook 'linum-mode)
+(setq column-number-mode t)
+
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 
 (require 'whitespace)
