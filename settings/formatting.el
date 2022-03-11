@@ -5,4 +5,6 @@
 
 (use-package smartparens
   :config (require 'smartparens-config)
-  :hook (prog-mode . smartparens-mode))
+  :hook
+  (prog-mode . smartparens-mode)
+  (org-mode . smartparens-mode))
