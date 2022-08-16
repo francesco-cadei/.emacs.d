@@ -1,4 +1,5 @@
 (require 'org)
+(require 'org-tempo)
 (setq org-startup-indented t)
 (setq org-startup-folded nil)
 (add-hook 'org-mode-hook 'linum-mode)
