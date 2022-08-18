@@ -15,7 +15,7 @@
 (load-file "~/.emacs.d/settings/syntax-check.el")
 (load-file "~/.emacs.d/settings/org.el")
 
+(load-file "~/.emacs.d/languages/markdown.el")
 (load-file "~/.emacs.d/languages/c-c++.el")
 (load-file "~/.emacs.d/languages/javascript.el")
 (load-file "~/.emacs.d/languages/haskell.el")
-
