@@ -7,7 +7,7 @@
 (load-file "~/.emacs.d/settings/git.el")
 (load-file "~/.emacs.d/settings/terminal.el")
 
-(load-file "~/.emacs.d/settings/suggestions.el")
+(load-file "~/.emacs.d/settings/completion.el")
 (load-file "~/.emacs.d/settings/indent.el")
 (load-file "~/.emacs.d/settings/formatting.el")
 (load-file "~/.emacs.d/settings/syntax-check.el")

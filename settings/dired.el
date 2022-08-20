@@ -1,6 +1,6 @@
 (put 'dired-find-alternate-file 'disabled nil)
 
-(setq dired-listing-switches "-lhA --group-directories-first")
+(setq dired-listing-switches "-lhA --group-directories-first -v")
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 
 (defun dired-extern ()

@@ -1,9 +1,3 @@
-(use-package yasnippet
-  :config (yas-global-mode))
-
-(use-package yasnippet-snippets)
-
-
 (use-package company
   :config
   (setq company-idle-delay 0)
@@ -13,3 +7,9 @@
 
 (use-package company-math
   :config (add-to-list 'company-backends 'company-math-symbols-unicode))
+
+
+(use-package yasnippet
+  :config (yas-global-mode))
+
+(use-package yasnippet-snippets)
