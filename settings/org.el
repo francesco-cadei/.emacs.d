@@ -29,4 +29,4 @@
     (browse-url (concat "file://"
 			(file-name-sans-extension buffer-file-name)
 			".html")))
-  :bind ("C-c e" . org-twbs-export-to-html-open))
+  :bind (:map org-mode-map ("C-c e" . org-twbs-export-to-html-open)))

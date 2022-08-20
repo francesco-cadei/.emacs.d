@@ -1,5 +1,3 @@
-(setq package-enable-at-startup nil)
-
 (load-file "~/.emacs.d/settings/packages.el")
 (load-file "~/.emacs.d/settings/defaults.el")
 (load-file "~/.emacs.d/settings/dired.el")
