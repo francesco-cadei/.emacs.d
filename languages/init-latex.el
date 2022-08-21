@@ -1,3 +1,7 @@
+;;; init-latex.el --- init-latex -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
 (add-hook 'LaTeX-mode-hook 'linum-mode)
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
 
@@ -17,3 +21,6 @@
   :bind (:map pdf-view-mode-map
 	      ("C-s" . 'isearch-forward-regexp)
 	      ("C-r" . 'isearch-forward-regexp)))
+
+(provide 'init-latex)
+;;; init-latex.el ends here

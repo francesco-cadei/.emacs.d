@@ -1,3 +1,7 @@
+;;; init-org.el --- init-org -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
 (require 'org)
 (require 'org-tempo)
 (setq org-startup-indented t)
@@ -30,3 +34,6 @@
 			(file-name-sans-extension buffer-file-name)
 			".html")))
   :bind (:map org-mode-map ("C-c e" . org-twbs-export-to-html-open)))
+
+(provide 'init-org)
+;;; init-org.el ends here

@@ -1,3 +1,7 @@
+;;; init-completion.el --- init-completion -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
 (use-package company
   :config
   (setq company-idle-delay 0)
@@ -13,3 +17,6 @@
   :config (yas-global-mode))
 
 (use-package yasnippet-snippets)
+
+(provide 'init-completion)
+;;; init-completion.el ends here

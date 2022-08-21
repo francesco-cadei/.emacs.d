@@ -1,3 +1,7 @@
+;;; init-minibuffer.el --- init-minibuffer -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
 (use-package ivy
   :config
   (setq ivy-extra-directories '("./"))
@@ -22,3 +26,6 @@
   ("C-x j" . 'counsel-git-grep)
   ("C-h f" . 'counsel-describe-function)
   ("C-h v" . 'counsel-describe-variable))
+
+(provide 'init-minibuffer)
+;;; init-minibuffer.el ends here

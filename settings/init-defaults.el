@@ -1,3 +1,8 @@
+;;; init-defaults.el --- init-defaults -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
+
 (setq make-backup-files nil)
 
 (setq inhibit-startup-message t)
@@ -24,3 +29,6 @@
 (delete 'lines whitespace-style)
 (delete 'empty whitespace-style)
 (global-whitespace-mode)
+
+(provide 'init-defaults)
+;;; init-defaults.el ends here

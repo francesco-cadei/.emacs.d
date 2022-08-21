@@ -1,3 +1,7 @@
+;;; init-dired.el --- init-dired -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
 (put 'dired-find-alternate-file 'disabled nil)
 
 (setq dired-listing-switches "-lhA --group-directories-first -v")
@@ -10,3 +14,6 @@
 
 (require 'dired)
 (define-key dired-mode-map (kbd "e") 'dired-extern)
+
+(provide 'init-dired)
+;;; init-dired.el ends here

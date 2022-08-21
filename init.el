@@ -1,20 +1,36 @@
-(load-file "~/.emacs.d/settings/packages.el")
-(load-file "~/.emacs.d/settings/defaults.el")
-(load-file "~/.emacs.d/settings/dired.el")
+;;; init.el --- init -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
 
-(load-file "~/.emacs.d/settings/minibuffer.el")
-(load-file "~/.emacs.d/settings/buffers-management.el")
-(load-file "~/.emacs.d/settings/git.el")
-(load-file "~/.emacs.d/settings/terminal.el")
+(setq package-enable-at-startup nil)
+;;(setq debug-on-error t)
 
-(load-file "~/.emacs.d/settings/completion.el")
-(load-file "~/.emacs.d/settings/indent.el")
-(load-file "~/.emacs.d/settings/formatting.el")
-(load-file "~/.emacs.d/settings/syntax-check.el")
-(load-file "~/.emacs.d/settings/org.el")
+(add-to-list 'load-path (expand-file-name "settings" user-emacs-directory))
 
-(load-file "~/.emacs.d/languages/markdown.el")
-(load-file "~/.emacs.d/languages/c-c++.el")
-(load-file "~/.emacs.d/languages/java.el")
-(load-file "~/.emacs.d/languages/javascript.el")
-(load-file "~/.emacs.d/languages/haskell.el")
+(require 'init-packages)
+(require 'init-defaults)
+(require 'init-dired)
+
+(require 'init-minibuffer)
+(require 'init-buffers-management)
+(require 'init-git)
+(require 'init-terminal)
+
+(require 'init-completion)
+(require 'init-indent)
+(require 'init-formatting)
+(require 'init-syntax-check)
+(require 'init-org)
+
+(add-to-list 'load-path (expand-file-name "languages" user-emacs-directory))
+
+(require 'init-markdown)
+(require 'init-c-c++)
+(require 'init-java)
+(require 'init-javascript)
+(require 'init-haskell)
+
+(require 'init-latex)
+
+(provide 'init)
+;;; init.el ends here
