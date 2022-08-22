@@ -3,7 +3,9 @@
 ;;; Code:
 
 (use-package flycheck
-  :config (global-flycheck-mode))
+  :config
+  (setq flycheck-emacs-lisp-load-path 'inherit)
+  (global-flycheck-mode))
 
 (provide 'init-syntax-check)
 ;;; init-syntax-check.el ends here
