@@ -7,8 +7,20 @@
   ("\\.js\\'" . rjsx-mode)
   ("\\.ts\\'" . rjsx-mode))
 
+(require 'tide)
 (use-package tide
   :config
+  (flycheck-define-generic-checker 'rjs-tide
+    "A JS syntax checker using tsserver."
+    :start #'tide-flycheck-start
+    :verify #'tide-flycheck-verify
+    :modes '(rjsx-mode)
+    :predicate (lambda ()
+		 (and
+		  (tide-file-extension-p "js")
+		  (tide-flycheck-predicate))))
+
+  (add-to-list 'flycheck-checkers 'rjs-tide t)
   (defun setup-tide-mode ()
     "Setup function for tide."
     (interactive)

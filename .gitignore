@@ -4,7 +4,7 @@
 !init.el
 !LICENSE.txt
 
-!settings/
-!settings/*
-!languages/
-!languages/*
+!init-settings/
+!init-settings/*
+!init-languages/
+!init-languages/*

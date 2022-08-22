@@ -3,9 +3,7 @@
 ;;; Code:
 
 (use-package flycheck
-  :config
-  ;; (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
-  (global-flycheck-mode))
+  :config (global-flycheck-mode))
 
 (provide 'init-syntax-check)
 ;;; init-syntax-check.el ends here

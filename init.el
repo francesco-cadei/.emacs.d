@@ -3,9 +3,9 @@
 ;;; Code:
 
 (setq package-enable-at-startup nil)
-;;(setq debug-on-error t)
+;; (setq debug-on-error t)
 
-(add-to-list 'load-path (expand-file-name "settings" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "init-settings" user-emacs-directory))
 
 (require 'init-packages)
 (require 'init-defaults)
@@ -22,7 +22,7 @@
 (require 'init-syntax-check)
 (require 'init-org)
 
-(add-to-list 'load-path (expand-file-name "languages" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "init-languages" user-emacs-directory))
 
 (require 'init-markdown)
 (require 'init-c-c++)
