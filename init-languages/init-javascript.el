@@ -19,14 +19,12 @@
 		 (and
 		  (tide-file-extension-p "js")
 		  (tide-flycheck-predicate))))
-
   (add-to-list 'flycheck-checkers 'rjs-tide t)
   (defun setup-tide-mode ()
     "Setup function for tide."
     (interactive)
     (tide-setup)
-    (setq flycheck-check-syntax-automatically '(save mode-enabled))
-    (eldoc-mode)
+    (setq flycheck-check-syntax-automatically '(save idle-change mode-enabled))
     (tide-hl-identifier-mode))
   :hook (rjsx-mode . setup-tide-mode))
 
@@ -34,7 +32,7 @@
   :mode
   ("\\.sgml\\'" . web-mode)
   ("\\.html\\'" . web-mode)
-  :hook (web-mode . tide-setup))
+  :hook (web-mode . setup-tide-mode))
 
 (use-package json-mode)
 

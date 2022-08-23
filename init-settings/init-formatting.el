@@ -8,10 +8,13 @@
 (delete-selection-mode)
 
 (use-package smartparens
-  :config (require 'smartparens-config)
+  :config
+  (require 'smartparens-config)
+  (show-smartparens-global-mode)
   :hook
   (prog-mode . smartparens-mode)
-  (org-mode . smartparens-mode))
+  (org-mode . smartparens-mode)
+  (LaTeX-mode . smartparens-mode))
 
 (provide 'init-formatting)
 ;;; init-formatting.el ends here

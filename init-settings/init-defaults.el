@@ -30,5 +30,8 @@
 (delete 'empty whitespace-style)
 (global-whitespace-mode)
 
+(require 'saveplace)
+(save-place-mode)
+
 (provide 'init-defaults)
 ;;; init-defaults.el ends here
