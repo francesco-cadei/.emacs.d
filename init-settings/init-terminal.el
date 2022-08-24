@@ -10,4 +10,4 @@
 (global-set-key (kbd "C-x C-d") 'default-term)
 
 (provide 'init-terminal)
-;;; terminal.el ends here
+;;; init-terminal.el ends here

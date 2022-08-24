@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 
-
 (setq make-backup-files nil)
 
 (setq inhibit-startup-message t)

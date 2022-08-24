@@ -11,6 +11,7 @@
 (require 'init-defaults)
 (require 'init-dired)
 
+(require 'init-frames)
 (require 'init-minibuffer)
 (require 'init-buffers-management)
 (require 'init-git)
@@ -25,9 +26,12 @@
 (add-to-list 'load-path (expand-file-name "init-languages" user-emacs-directory))
 
 (require 'init-markdown)
+
 (require 'init-c-c++)
 (require 'init-java)
 (require 'init-javascript)
+
+(require 'init-clojure)
 (require 'init-haskell)
 
 (require 'init-latex)
