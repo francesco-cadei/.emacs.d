@@ -6,6 +6,7 @@
 
 (require 'ibuffer)
 (use-package ibuffer-vc
+  :config (setq ibuffer-show-empty-filter-groups nil)
   :hook (ibuffer . (lambda ()
 		     (ibuffer-vc-set-filter-groups-by-vc-root)
 		     (unless (eq ibuffer-sorting-mode 'major-mode)
