@@ -2,9 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 
-(add-hook 'LaTeX-mode-hook 'linum-mode)
-(add-hook 'LaTeX-mode-hook 'visual-line-mode)
-
 (use-package tex
   :ensure auctex
   :config
@@ -12,12 +9,14 @@
   (setq TeX-save-query nil)
   (setq TeX-source-correlate-mode t
 	TeX-source-correlate-start-server t)
-  (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer))
-
-(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+  (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
+  :hook
+  (LaTeX-mode . linum-mode)
+  (LaTeX-mode . visual-line-mode)
+  (LaTeX-mode . turn-on-reftex))
 
 (use-package pdf-tools
-  :config (pdf-tools-install)
+  :config (pdf-loader-install)
   :bind (:map pdf-view-mode-map
 	      ("C-s" . 'isearch-forward-regexp)
 	      ("C-r" . 'isearch-forward-regexp)))
