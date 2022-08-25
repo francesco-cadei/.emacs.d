@@ -2,15 +2,11 @@
 ;;; Commentary:
 ;;; Code:
 
-(setq make-backup-files nil)
-
 (setq inhibit-startup-message t)
-(custom-set-variables
- '(initial-frame-alist '((fullscreen . maximized))))
-
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 
+(setq make-backup-files nil)
 (setq delete-by-moving-to-trash t)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq kill-buffer-query-functions nil)

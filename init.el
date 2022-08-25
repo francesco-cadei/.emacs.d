@@ -2,9 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(setq package-enable-at-startup nil)
 ;; (setq debug-on-error t)
-
 (add-to-list 'load-path (expand-file-name "init-settings" user-emacs-directory))
 
 (require 'init-packages)
