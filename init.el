@@ -29,7 +29,6 @@
 (require 'init-java)
 (require 'init-javascript)
 
-(require 'init-clojure)
 (require 'init-haskell)
 
 (require 'init-latex)
