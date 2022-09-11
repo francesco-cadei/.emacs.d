@@ -17,8 +17,9 @@
 
 (add-hook 'prog-mode-hook 'linum-mode)
 (setq column-number-mode t)
-
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
+
+(server-start)
 
 (require 'whitespace)
 (delete 'lines whitespace-style)
