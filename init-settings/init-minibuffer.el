@@ -27,5 +27,9 @@
   ("C-h f" . 'counsel-describe-function)
   ("C-h v" . 'counsel-describe-variable))
 
+(use-package flyspell-correct-ivy
+  :bind ("M-$" . flyspell-correct-wrapper)
+  :init (setq flyspell-correct-interface 'flyspell-correct-ivy))
+
 (provide 'init-minibuffer)
 ;;; init-minibuffer.el ends here
