@@ -10,9 +10,9 @@
 
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'flyspell-mode-hook 'flyspell-buffer)
-(add-hook 'prog-mode-hook 'flyspell-prog-mode)
-(add-hook 'flyspell-prog-mode-hook
-	  (lambda () (run-with-idle-timer 0 nil 'flyspell-buffer)))
+;; (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+;; (add-hook 'flyspell-prog-mode-hook
+;; 	  (lambda () (run-with-idle-timer 0 nil 'flyspell-buffer)))
 
 (use-package flycheck
   :config
