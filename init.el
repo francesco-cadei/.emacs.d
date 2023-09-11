@@ -18,7 +18,7 @@
 (require 'init-completion)
 (require 'init-indent)
 (require 'init-formatting)
-(require 'init-syntax-check)
+(require 'init-spell-syntax-check)
 (require 'init-org)
 
 (add-to-list 'load-path (expand-file-name "init-languages" user-emacs-directory))

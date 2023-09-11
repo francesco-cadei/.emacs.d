@@ -21,19 +21,5 @@
 (use-package org-bullets
   :hook (org-mode . org-bullets-mode))
 
-(use-package ox-twbs
-  :config
-  (add-to-list 'org-export-backends 'twbs)
-
-  (defun org-twbs-export-to-html-open ()
-    "Use ox-twbs to export html and open it in browser."
-    (interactive)
-    (save-buffer)
-    (org-twbs-export-to-html)
-    (browse-url (concat "file://"
-			(file-name-sans-extension buffer-file-name)
-			".html")))
-  :bind (:map org-mode-map ("C-c e" . org-twbs-export-to-html-open)))
-
 (provide 'init-org)
 ;;; init-org.el ends here
