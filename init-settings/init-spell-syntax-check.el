@@ -3,7 +3,11 @@
 ;;; Code:
 
 (require 'ispell)
-(setq ispell-program-name "aspell")
+(setq ispell-program-name "hunspell")
+(setq ispell-dictionary "en_US,it_IT")
+(ispell-set-spellchecker-params)
+(ispell-hunspell-add-multi-dic "en_US,it_IT")
+
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 

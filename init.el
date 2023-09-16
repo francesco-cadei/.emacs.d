@@ -33,5 +33,8 @@
 
 (require 'init-latex)
 
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file 'noerror)
+
 (provide 'init)
 ;;; init.el ends here
