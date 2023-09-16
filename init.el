@@ -2,36 +2,32 @@
 ;;; Commentary:
 ;;; Code:
 
-;; (setq debug-on-error t)
 (add-to-list 'load-path (expand-file-name "init-settings" user-emacs-directory))
 
-(require 'init-packages)
-(require 'init-defaults)
-(require 'init-dired)
+(require 'init-package-manager)
+(require 'init-core)
 
-(require 'init-frames)
+(require 'init-buffer-manager)
 (require 'init-minibuffer)
-(require 'init-buffers-management)
-(require 'init-git)
-(require 'init-terminal)
+(require 'init-folders)
 
-(require 'init-completion)
-(require 'init-indent)
-(require 'init-formatting)
 (require 'init-spell-syntax-check)
-(require 'init-org)
+(require 'init-format)
+(require 'init-autocomplete)
+
+(require 'init-vc)
 
 (add-to-list 'load-path (expand-file-name "init-languages" user-emacs-directory))
 
-(require 'init-markdown)
+(require 'init-org)
+(require 'init-md)
+(require 'init-tex)
 
-(require 'init-c-c++)
+(require 'init-c)
 (require 'init-java)
-(require 'init-javascript)
+(require 'init-js)
 
-(require 'init-haskell)
-
-(require 'init-latex)
+(require 'init-hs)
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)

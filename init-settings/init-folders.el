@@ -1,4 +1,4 @@
-;;; init-dired.el --- init-dired -*- lexical-binding: t -*-
+;;; init-folders.el --- init-folders -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -8,12 +8,12 @@
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 
 (defun dired-extern ()
-  "In dired, open externally the file mentioned on this line."
+  "In Dired, open externally the file mentioned on this line."
   (interactive)
   (call-process "xdg-open" nil 0 nil (dired-get-filename t nil)))
 
 (require 'dired)
 (define-key dired-mode-map (kbd "e") 'dired-extern)
 
-(provide 'init-dired)
-;;; init-dired.el ends here
+(provide 'init-folders)
+;;; init-folders.el ends here

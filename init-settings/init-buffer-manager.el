@@ -1,4 +1,4 @@
-;;; init-buffers-management.el --- init-buffers-management -*- lexical-binding: t -*-
+;;; init-buffer-manager.el --- init-buffer-manager -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -12,5 +12,5 @@
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-(provide 'init-buffers-management)
-;;; init-buffers-management.el ends here
+(provide 'init-buffer-manager)
+;;; init-buffer-manager.el ends here

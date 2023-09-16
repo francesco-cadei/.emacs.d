@@ -11,6 +11,7 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
+
 (use-package flycheck
   :config
   (setq flycheck-emacs-lisp-load-path 'inherit)

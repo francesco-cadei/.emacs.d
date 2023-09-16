@@ -1,4 +1,4 @@
-;;; init-completion.el --- init-completion -*- lexical-binding: t -*-
+;;; init-autocomplete.el --- init-automplete -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -18,5 +18,5 @@
 
 (use-package yasnippet-snippets)
 
-(provide 'init-completion)
-;;; init-completion.el ends here
+(provide 'init-autocomplete)
+;;; init-autocomplete.el ends here

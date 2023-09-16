@@ -1,4 +1,4 @@
-;;; init-javascript.el --- init-javascript -*- lexical-binding: t -*-
+;;; init-js.el --- init-js -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -27,7 +27,7 @@
 	       (and
 		(tide-file-extension-p "js")
 		(tide-flycheck-predicate))))
-(add-to-list 'flycheck-checkers 'js-tide t)
+(add-to-list 'flycheck-checkers 'js-tide)
 
 (flycheck-define-generic-checker 'ts-tide
   "A TS syntax checker using tsserver."
@@ -38,7 +38,8 @@
 	       (and
 		(tide-file-extension-p "ts")
 		(tide-flycheck-predicate))))
-(add-to-list 'flycheck-checkers 'ts-tide t)
+(add-to-list 'flycheck-checkers 'ts-tide)
+
 
 (use-package web-mode
   :mode
@@ -48,5 +49,5 @@
 
 (use-package json-mode)
 
-(provide 'init-javascript)
-;;; init-javascript.el ends here
+(provide 'init-js)
+;;; init-js.el ends here

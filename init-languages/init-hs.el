@@ -1,4 +1,4 @@
-;;; init-haskell.el --- init-haskell -*- lexical-binding: t -*-
+;;; init-hs.el --- init-hs -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -6,5 +6,5 @@
   :config (setq haskell-process-show-debug-tips nil)
   :hook (haskell-mode . interactive-haskell-mode))
 
-(provide 'init-haskell)
-;;; init-haskell.el ends here
+(provide 'init-hs)
+;;; init-hs.el ends here

@@ -1,4 +1,4 @@
-;;; init-packages.el --- init-packages -*- lexical-binding: t -*-
+;;; init-package-manager.el --- package-manager -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -13,5 +13,5 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
-(provide 'init-packages)
-;;; init-packages.el ends here
+(provide 'init-package-manager)
+;;; init-package-manager.el ends here

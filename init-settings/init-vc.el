@@ -1,4 +1,4 @@
-;;; init-git.el --- init-git -*- lexical-binding: t -*-
+;;; init-vc.el --- init-vc -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -8,5 +8,5 @@
 (use-package git-link
   :config (setq git-link-open-in-browser t))
 
-(provide 'init-git)
-;;; init-git.el ends here
+(provide 'init-vc)
+;;; init-vc.el ends here

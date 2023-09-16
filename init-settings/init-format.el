@@ -1,4 +1,4 @@
-;;; init-formatting.el --- init-formatting -*- lexical-binding: t -*-
+;;; init-format.el --- init-format -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -6,6 +6,9 @@
 (put 'downcase-region 'disabled nil)
 
 (delete-selection-mode)
+
+(use-package aggressive-indent
+  :config (global-aggressive-indent-mode))
 
 (use-package smartparens
   :config
@@ -15,5 +18,5 @@
   (LaTeX-mode . smartparens-mode)
   (prog-mode . smartparens-mode))
 
-(provide 'init-formatting)
-;;; init-formatting.el ends here
+(provide 'init-format)
+;;; init-format.el ends here

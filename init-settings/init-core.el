@@ -1,4 +1,4 @@
-;;; init-defaults.el --- init-defaults -*- lexical-binding: t -*-
+;;; init-core.el --- init-core -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -27,5 +27,12 @@
 (require 'saveplace)
 (save-place-mode)
 
-(provide 'init-defaults)
-;;; init-defaults.el ends here
+(defun my-term ()
+  "A term with the default shell set."
+  (interactive)
+  (ansi-term "/bin/bash"))
+
+(global-set-key (kbd "C-x C-d") 'my-term)
+
+(provide 'init-core)
+;;; init-core.el ends here

@@ -1,4 +1,4 @@
-;;; init-latex.el --- init-latex -*- lexical-binding: t -*-
+;;; init-tex.el --- init-tex -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -21,5 +21,5 @@
 	      ("C-s" . 'isearch-forward-regexp)
 	      ("C-r" . 'isearch-forward-regexp)))
 
-(provide 'init-latex)
-;;; init-latex.el ends here
+(provide 'init-tex)
+;;; init-tex.el ends here
