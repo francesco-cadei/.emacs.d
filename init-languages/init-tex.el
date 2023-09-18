@@ -10,13 +10,19 @@
   (setq TeX-source-correlate-mode t
 	TeX-source-correlate-start-server t)
   (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
+  (add-to-list 'TeX-command-list
+	       '("-shell-escape"
+		 "%`%l -shell-escape %(mode)%' %t"
+		 TeX-run-TeX nil t :help "Run LaTeX with -shell-escape"))
   :hook
   (LaTeX-mode . linum-mode)
   (LaTeX-mode . visual-line-mode)
   (LaTeX-mode . turn-on-reftex))
 
 (use-package pdf-tools
-  :config (pdf-loader-install)
+  :config
+  (pdf-loader-install)
+  (add-hook 'pdf-view-mode-hook 'pdf-view-auto-slice-minor-mode)
   :bind (:map pdf-view-mode-map
 	      ("C-s" . 'isearch-forward-regexp)
 	      ("C-r" . 'isearch-forward-regexp)))

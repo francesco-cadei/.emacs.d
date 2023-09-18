@@ -20,6 +20,7 @@
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 
 (require 'whitespace)
+(delete 'face whitespace-style)
 (delete 'lines whitespace-style)
 (delete 'empty whitespace-style)
 (global-whitespace-mode)
