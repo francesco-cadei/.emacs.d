@@ -30,6 +30,7 @@
 (add-hook 'prog-mode-hook 'linum-mode)
 (setq column-number-mode t)
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
+(global-auto-revert-mode)
 
 (require 'whitespace)
 (delete 'face whitespace-style)

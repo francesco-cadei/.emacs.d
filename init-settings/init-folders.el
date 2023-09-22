@@ -3,9 +3,10 @@
 ;;; Code:
 
 (put 'dired-find-alternate-file 'disabled nil)
-
 (setq dired-listing-switches "-lhA --group-directories-first -v")
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
+(add-hook 'dired-mode-hook 'auto-revert-mode)
+
 
 (defun dired-extern ()
   "In Dired, open externally the file mentioned on this line."
