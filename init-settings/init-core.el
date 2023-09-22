@@ -2,6 +2,18 @@
 ;;; Commentary:
 ;;; Code:
 
+(require 'package)
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/"))
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
+
 (setq inhibit-startup-message t)
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
@@ -22,7 +34,6 @@
 (require 'whitespace)
 (delete 'face whitespace-style)
 (delete 'lines whitespace-style)
-(delete 'empty whitespace-style)
 (global-whitespace-mode)
 
 (require 'saveplace)

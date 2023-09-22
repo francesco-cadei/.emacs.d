@@ -4,16 +4,15 @@
 
 (add-to-list 'load-path (expand-file-name "init-settings" user-emacs-directory))
 
-(require 'init-package-manager)
 (require 'init-core)
 
 (require 'init-buffer-manager)
 (require 'init-minibuffer)
 (require 'init-folders)
 
-(require 'init-spell-syntax-check)
 (require 'init-format)
-(require 'init-autocomplete)
+(require 'init-completions)
+(require 'init-spell-syntax-check)
 
 (require 'init-vc)
 

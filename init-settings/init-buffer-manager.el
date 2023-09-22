@@ -6,10 +6,10 @@
 (use-package ibuffer-vc
   :config (setq ibuffer-show-empty-filter-groups nil)
   :hook (ibuffer . (lambda ()
-		     (ibuffer-vc-set-filter-groups-by-vc-root)
-		     (unless (eq ibuffer-sorting-mode 'major-mode)
-		       (ibuffer-do-sort-by-major-mode)))))
-
+		     (and
+		      (ibuffer-vc-set-filter-groups-by-vc-root)
+		      (unless (eq ibuffer-sorting-mode 'filename/process)
+			(ibuffer-do-sort-by-filename/process))))))
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (provide 'init-buffer-manager)

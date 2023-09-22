@@ -4,7 +4,6 @@
 
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
-
 (delete-selection-mode)
 
 (use-package aggressive-indent
