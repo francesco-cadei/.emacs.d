@@ -33,7 +33,10 @@
 (global-auto-revert-mode)
 
 (require 'whitespace)
-(delete 'face whitespace-style)
+(setq whitespace-display-mappings
+      '((newline-mark 10 [36 10])
+	(tab-mark 9 [187 9] [92 9])))
+(delete 'spaces whitespace-style)
 (delete 'lines whitespace-style)
 (global-whitespace-mode)
 
