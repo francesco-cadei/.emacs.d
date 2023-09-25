@@ -38,6 +38,7 @@
 	(tab-mark 9 [187 9] [92 9])))
 (delete 'spaces whitespace-style)
 (delete 'lines whitespace-style)
+(delete 'empty whitespace-style)
 (global-whitespace-mode)
 
 (require 'saveplace)

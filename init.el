@@ -31,5 +31,8 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
 
+(find-file "~/sync-cloned/notebooks/todo.org")
+(kill-buffer "*scratch*")
+
 (provide 'init)
 ;;; init.el ends here
