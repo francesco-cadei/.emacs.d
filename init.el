@@ -31,8 +31,10 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
 
-(dired "~/sync-cloned/notebooks/")
 (kill-buffer "*scratch*")
+;; Files dependent.
+(dired "~/sync-cloned/uni/now/")
+(dired "~/sync-cloned/notebooks/")
 
 (provide 'init)
 ;;; init.el ends here
