@@ -7,17 +7,11 @@
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 (add-hook 'dired-mode-hook 'auto-revert-mode)
 
-
-(defun dired-extern ()
-  "In Dired, open externally the file mentioned on this line."
-  (interactive)
-  (call-process "xdg-open" nil 0 nil (dired-get-filename t nil)))
-
-(require 'dired)
-(define-key dired-mode-map (kbd "e") 'dired-extern)
-
-
 (use-package sudo-edit)
+
+(require 'dired-x)
+(setq dired-omit-files
+      (rx (seq bol "." (not (any ".")))))
 
 (provide 'init-folders)
 ;;; init-folders.el ends here
