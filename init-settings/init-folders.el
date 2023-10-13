@@ -16,5 +16,8 @@
 (require 'dired)
 (define-key dired-mode-map (kbd "e") 'dired-extern)
 
+
+(use-package sudo-edit)
+
 (provide 'init-folders)
 ;;; init-folders.el ends here
