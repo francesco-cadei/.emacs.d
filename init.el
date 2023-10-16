@@ -15,6 +15,7 @@
 (require 'init-spell-syntax-check)
 
 (require 'init-vc)
+(require 'init-execute)
 
 (add-to-list 'load-path (expand-file-name "init-languages" user-emacs-directory))
 
