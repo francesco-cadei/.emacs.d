@@ -31,12 +31,7 @@
 (load custom-file 'noerror)
 
 (kill-buffer "*scratch*")
-;; Files dependent.
-(dired "~/sync-cloned/uni/now/")
-(split-window-right)
-(other-window 1)
-(dired "~/sync-cloned/notebooks/")
-(other-window 1)
+(load (expand-file-name "private-startup.el" user-emacs-directory) 'noerr)
 
 (provide 'init)
 ;;; init.el ends here
