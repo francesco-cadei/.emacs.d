@@ -7,7 +7,8 @@
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 (add-hook 'dired-mode-hook 'auto-revert-mode)
 
-(use-package sudo-edit)
+(use-package sudo-edit
+  :config (sudo-edit-indicator-mode))
 
 (require 'dired-x)
 (setq dired-omit-files

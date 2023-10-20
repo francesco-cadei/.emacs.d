@@ -20,14 +20,12 @@
 (add-to-list 'load-path (expand-file-name "init-languages" user-emacs-directory))
 
 (require 'init-org)
-(require 'init-md)
 (require 'init-tex)
+(require 'init-md)
 
 (require 'init-c)
 (require 'init-java)
 (require 'init-js)
-
-(require 'init-hs)
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
@@ -35,7 +33,10 @@
 (kill-buffer "*scratch*")
 ;; Files dependent.
 (dired "~/sync-cloned/uni/now/")
+(split-window-right)
+(other-window 1)
 (dired "~/sync-cloned/notebooks/")
+(other-window 1)
 
 (provide 'init)
 ;;; init.el ends here
