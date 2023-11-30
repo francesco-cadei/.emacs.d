@@ -23,13 +23,12 @@
  'org-babel-load-languages nil)
 
 (require 'ox-latex)
-(setq org-latex-listings 'minted
-      org-latex-packages-alist '(("" "minted"))
+(setq org-latex-packages-alist '(("" "minted")("" "fullpage" ))
+      org-latex-listings 'minted
       org-latex-pdf-process
       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
 	"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
 	"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
-
 
 (use-package org-bullets
   :hook (org-mode . org-bullets-mode))

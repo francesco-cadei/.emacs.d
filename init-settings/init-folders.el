@@ -14,9 +14,5 @@
 (setq dired-omit-files
       (rx (seq bol "." (not (any ".")))))
 
-(setq dired-guess-shell-alist-user
-      (list
-       (list "\\.pdf$" "firefox-esr")))
-
 (provide 'init-folders)
 ;;; init-folders.el ends here

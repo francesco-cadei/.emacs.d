@@ -30,8 +30,8 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
 
-(kill-buffer "*scratch*")
-(load (expand-file-name "private-startup.el" user-emacs-directory) 'noerr)
+(add-to-list 'load-path (expand-file-name "init-private" user-emacs-directory))
+(require 'init-setup)
 
 (provide 'init)
 ;;; init.el ends here
