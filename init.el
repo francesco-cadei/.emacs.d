@@ -30,7 +30,7 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
 
-(add-to-list 'load-path (expand-file-name "init-private" user-emacs-directory))
+(add-to-list 'load-path "~/git-private/init-private")
 (require 'init-setup)
 
 (provide 'init)

@@ -18,10 +18,5 @@
 (use-package company-math
   :config (add-to-list 'company-backends 'company-math-symbols-unicode))
 
-;; (use-package company-quickhelp
-;;   :config
-;;   (setq company-quickhelp-delay 0.1)
-;;   (company-quickhelp-mode))
-
 (provide 'init-completions)
 ;;; init-completions.el ends here
