@@ -31,5 +31,9 @@
   :config (setq flyspell-correct-interface 'flyspell-correct-ivy)
   :bind ("M-$" . flyspell-correct-wrapper))
 
+(require 'ivy-hydra)
+(use-package ivy-hydra
+  :bind (:map ivy-minibuffer-map ("C-o" . 'hydra-ivy/body)))
+
 (provide 'init-minibuffer)
 ;;; init-minibuffer.el ends here
