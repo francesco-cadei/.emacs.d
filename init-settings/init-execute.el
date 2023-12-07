@@ -3,8 +3,7 @@
 ;;; Code:
 
 (use-package quickrun
-  :config (setq quickrun-focus-p nil)
-  :bind ("C-c r" . 'quickrun))
+  :bind ("C-c r" . 'quickrun-shell))
 
 (provide 'init-execute)
 ;;; init-execute.el ends here

@@ -19,8 +19,10 @@
 
 (setq org-src-tab-acts-natively t)
 (setq org-confirm-babel-evaluate nil)
-(org-babel-do-load-languages
- 'org-babel-load-languages nil)
+(add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
+(require 'ob-plantuml)
+(setq org-plantuml-jar-path (expand-file-name "~/plantuml.jar"))
+(org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
 
 (require 'ox-latex)
 (setq org-latex-packages-alist '(("" "minted")("" "fullpage" ))
