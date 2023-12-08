@@ -14,5 +14,8 @@
 (setq dired-omit-files
       (rx (seq bol "." (not (any ".")))))
 
+(use-package diredfl
+  :config (diredfl-global-mode))
+
 (provide 'init-folders)
 ;;; init-folders.el ends here

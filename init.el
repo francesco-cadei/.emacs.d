@@ -17,11 +17,14 @@
 (require 'init-vc)
 (require 'init-execute)
 
+(require 'init-theme)
+
 (add-to-list 'load-path (expand-file-name "init-languages" user-emacs-directory))
 
 (require 'init-org)
 (require 'init-tex)
 (require 'init-md)
+(require 'init-uml)
 
 (require 'init-c)
 (require 'init-java)
