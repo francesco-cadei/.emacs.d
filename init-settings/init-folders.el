@@ -13,6 +13,7 @@
 (require 'dired-x)
 (setq dired-omit-files
       (rx (seq bol "." (not (any ".")))))
+(add-hook 'dired-mode-hook (lambda () (dired-omit-mode)))
 
 (use-package diredfl
   :config (diredfl-global-mode))
