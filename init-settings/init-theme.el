@@ -11,5 +11,11 @@
   (doom-themes-visual-bell-config)
   (doom-themes-org-config))
 
+(use-package doom-modeline
+  :init (doom-modeline-mode))
+
+(use-package nerd-icons)
+;; nerd-icons-install-fonts
+
 (provide 'init-theme)
 ;;; init-theme.el ends here
