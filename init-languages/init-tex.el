@@ -22,7 +22,7 @@
 (use-package pdf-tools
   :config
   (pdf-loader-install)
-  (add-hook 'pdf-view-mode-hook 'pdf-view-auto-slice-minor-mode)
+  (add-hook 'pdf-view-mode-hook 'pdf-view-fit-page-to-window)
   :bind (:map pdf-view-mode-map
 	      ("C-s" . 'isearch-forward-regexp)
 	      ("C-r" . 'isearch-forward-regexp)))

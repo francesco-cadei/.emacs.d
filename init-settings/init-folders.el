@@ -11,8 +11,8 @@
   :config (sudo-edit-indicator-mode))
 
 (require 'dired-x)
-(setq dired-omit-files
-      (rx (seq bol "." (not (any ".")))))
+(setq dired-omit-files "^\\..*")
+(setq dired-omit-extensions nil)
 (add-hook 'dired-mode-hook (lambda () (dired-omit-mode)))
 
 (use-package diredfl

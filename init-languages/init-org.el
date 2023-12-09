@@ -19,13 +19,13 @@
 
 (setq org-src-tab-acts-natively t)
 (setq org-confirm-babel-evaluate nil)
-(add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
 (require 'ob-plantuml)
 (setq org-plantuml-jar-path (expand-file-name "~/plantuml.jar"))
 (org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
+(add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
 
 (require 'ox-latex)
-(setq org-latex-packages-alist '(("" "minted")("" "fullpage" ))
+(setq org-latex-packages-alist '(("" "minted")("" "fullpage"))
       org-latex-listings 'minted
       org-latex-pdf-process
       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
