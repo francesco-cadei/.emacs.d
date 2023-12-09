@@ -5,7 +5,8 @@
 (use-package ivy
   :config
   (setq ivy-extra-directories '("./"))
-  (ivy-mode))
+  (ivy-mode)
+  (ivy-rich-mode))
 
 (require 'ivy)
 (use-package swiper

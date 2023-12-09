@@ -15,9 +15,7 @@
   :hook (ibuffer-mode . nerd-icons-ibuffer-mode))
 
 (use-package nerd-icons-ivy-rich
-  :config
-  (nerd-icons-ivy-rich-mode)
-  (ivy-rich-mode))
+  :config (nerd-icons-ivy-rich-mode))
 
 (provide 'init-theme)
 ;;; init-theme.el ends here
