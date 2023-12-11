@@ -24,7 +24,7 @@
 (setq kill-buffer-query-functions nil)
 (setq confirm-kill-processes nil)
 
-(global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-x k") 'kill-current-buffer)
 (setq browse-url-browser-function 'browse-url-firefox)
 
 (add-hook 'prog-mode-hook 'linum-mode)
