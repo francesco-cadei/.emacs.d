@@ -25,6 +25,8 @@
 (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
 
 (require 'ox-latex)
+(setq org-export-with-toc nil
+      org-export-with-section-numbers nil)
 (setq org-latex-packages-alist '(("" "minted")("" "fullpage"))
       org-latex-listings 'minted
       org-latex-pdf-process
