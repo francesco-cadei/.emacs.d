@@ -15,7 +15,6 @@
 (require 'init-spell-syntax-check)
 
 (require 'init-vc)
-(require 'init-execute)
 
 (require 'init-theme)
 
