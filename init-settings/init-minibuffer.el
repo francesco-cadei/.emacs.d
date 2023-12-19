@@ -32,5 +32,8 @@
   :config (setq flyspell-correct-interface 'flyspell-correct-ivy)
   :bind ("M-$" . flyspell-correct-wrapper))
 
+(use-package ivy-hydra)
+;; useful for lsp-java getter and setter..
+
 (provide 'init-minibuffer)
 ;;; init-minibuffer.el ends here
