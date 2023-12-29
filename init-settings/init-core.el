@@ -44,6 +44,8 @@
 (require 'saveplace)
 (save-place-mode)
 
+(kill-buffer "*scratch*")
+
 (defun my-term ()
   "A term with the default shell set."
   (interactive)

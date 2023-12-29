@@ -29,11 +29,5 @@
 (require 'init-java)
 (require 'init-js)
 
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(load custom-file 'noerror)
-
-(add-to-list 'load-path "~/git-private/init-private")
-(require 'init-setup)
-
 (provide 'init)
 ;;; init.el ends here

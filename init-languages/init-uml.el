@@ -4,7 +4,7 @@
 
 (use-package plantuml-mode
   :config
-  (add-to-list 'auto-mode-alist '("\\.plantuml\\'" . plantuml-mode)))
+  (add-to-list 'auto-mode-alist '("\\.puml\\'" . plantuml-mode)))
 ;; plantuml-download-jar
 
 (provide 'init-uml)
