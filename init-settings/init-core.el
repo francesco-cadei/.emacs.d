@@ -44,14 +44,15 @@
 (require 'saveplace)
 (save-place-mode)
 
-(kill-buffer "*scratch*")
-
 (defun my-term ()
   "A term with the default shell set."
   (interactive)
   (ansi-term "/bin/bash"))
 
 (global-set-key (kbd "C-x C-d") 'my-term)
+
+(kill-buffer "*scratch*")
+(treemacs)
 
 (provide 'init-core)
 ;;; init-core.el ends here

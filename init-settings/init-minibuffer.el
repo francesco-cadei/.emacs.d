@@ -35,7 +35,5 @@
 (use-package ivy-hydra)
 ;; useful for lsp-java getter and setter..
 
-(treemacs)
-
 (provide 'init-minibuffer)
 ;;; init-minibuffer.el ends here

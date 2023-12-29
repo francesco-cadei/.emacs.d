@@ -15,13 +15,6 @@
 (use-package flycheck
   :config
   (setq flycheck-emacs-lisp-load-path 'inherit)
-  (add-to-list 'display-buffer-alist
-	       `(,(rx bos "*Flycheck errors*" eos)
-		 (display-buffer-reuse-window
-		  display-buffer-in-side-window)
-		 (side            . bottom)
-		 (reusable-frames . visible)
-		 (window-height   . 0.25)))
   (global-flycheck-mode))
 
 (provide 'init-spell-syntax-check)
