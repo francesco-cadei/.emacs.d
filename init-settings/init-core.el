@@ -53,6 +53,7 @@
 
 (kill-buffer "*scratch*")
 (treemacs)
+(other-window 1)
 
 (provide 'init-core)
 ;;; init-core.el ends here
