@@ -52,7 +52,8 @@
 (global-set-key (kbd "C-x C-d") 'my-term)
 
 (kill-buffer "*scratch*")
-(require 'treemacs)
+(use-package treemacs)
+(use-package treemacs-magit)
 (treemacs)
 (other-window 1)
 
