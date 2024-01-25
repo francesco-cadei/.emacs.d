@@ -3,9 +3,7 @@
 ;;; Code:
 
 (use-package irony
-  :hook
-  (c-mode . irony-mode)
-  (c++-mode . irony-mode))
+  :hook (c-mode . irony-mode))
 ;; M-x irony-install-server
 
 (require 'company)

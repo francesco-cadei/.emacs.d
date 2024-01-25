@@ -52,6 +52,7 @@
 (global-set-key (kbd "C-x C-d") 'my-term)
 
 (kill-buffer "*scratch*")
+(require 'treemacs)
 (treemacs)
 (other-window 1)
 

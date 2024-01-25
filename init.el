@@ -22,12 +22,11 @@
 
 (require 'init-org)
 (require 'init-tex)
-(require 'init-md)
 (require 'init-uml)
+(require 'init-extra)
 
 (require 'init-c)
-(require 'init-java)
-(require 'init-js)
+(require 'init-eglot)
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
