@@ -6,8 +6,8 @@
 
 (require 'init-core)
 
-(require 'init-buffer-manager)
 (require 'init-minibuffer)
+(require 'init-buffers)
 (require 'init-folders)
 
 (require 'init-completions)
@@ -27,8 +27,6 @@
 
 (require 'init-c)
 (require 'init-eglot)
-
-(require 'init-runner)
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
