@@ -10,9 +10,9 @@
 (require 'init-minibuffer)
 (require 'init-folders)
 
-(require 'init-format)
 (require 'init-completions)
-(require 'init-spell-syntax-check)
+(require 'init-format)
+(require 'init-check)
 
 (require 'init-vc)
 
@@ -27,6 +27,8 @@
 
 (require 'init-c)
 (require 'init-eglot)
+
+(require 'init-runner)
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)

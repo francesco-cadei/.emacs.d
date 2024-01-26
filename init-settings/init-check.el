@@ -1,4 +1,4 @@
-;;; init-spell-syntax-check.el --- init-spell-syntax-check -*- lexical-binding: t -*-
+;;; init-check.el --- init-check -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -17,5 +17,5 @@
   (setq flycheck-emacs-lisp-load-path 'inherit)
   (global-flycheck-mode))
 
-(provide 'init-spell-syntax-check)
-;;; init-spell-syntax-check.el ends here
+(provide 'init-check)
+;;; init-check.el ends here

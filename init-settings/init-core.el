@@ -44,18 +44,16 @@
 (require 'saveplace)
 (save-place-mode)
 
-(defun my-term ()
+(defun default-term ()
   "A term with the default shell set."
   (interactive)
   (ansi-term "/bin/bash"))
+(global-set-key (kbd "C-x C-d") 'default-term)
 
-(global-set-key (kbd "C-x C-d") 'my-term)
-
-(kill-buffer "*scratch*")
-(use-package treemacs)
+(use-package treemacs
+  :config (treemacs))
 (use-package treemacs-magit)
-(treemacs)
-(other-window 1)
+(kill-buffer "*scratch*")
 
 (provide 'init-core)
 ;;; init-core.el ends here
