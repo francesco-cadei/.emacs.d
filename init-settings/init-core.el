@@ -54,6 +54,7 @@
   :config (treemacs))
 (use-package treemacs-magit)
 (kill-buffer "*scratch*")
+(other-window 1)
 
 (provide 'init-core)
 ;;; init-core.el ends here
