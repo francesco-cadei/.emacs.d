@@ -4,12 +4,16 @@
 
 (use-package eglot
   :config
-  (add-to-list 'eglot-server-programs
-	       '(java-mode . ("~/jdt-language-server-1.33.0-202402151717/bin/jdtls")))
+  (setq eglot-autoshutdown t)
   :hook
-  (java-mode . eglot-ensure) ;; https://download.eclipse.org/jdtls/milestones/?d
-  (js-mode . eglot-ensure) ;; npm install -g typescript-language-server typescript
+  (java-mode . eglot-ensure)
+  (js-mode . eglot-ensure);; npm install -g typescript-language-server typescript
   )
+
+(use-package eglot-java
+  :hook (java-mode . eglot-java-mode))
+;; M-x eglot-java-upgrade-junit-jar
+;; M-x eglot-java-upgrade-lsp-server
 
 (provide 'init-eglot)
 ;;; init-eglot.el ends here
