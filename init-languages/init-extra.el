@@ -2,9 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
-(use-package yaml-mode)
-
 (use-package json-mode)
+
 
 (use-package web-mode
   :mode ("\\.html\\'" . web-mode))

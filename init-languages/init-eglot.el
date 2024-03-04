@@ -3,11 +3,11 @@
 ;;; Code:
 
 (use-package eglot
-  :config
-  (setq eglot-autoshutdown t)
+  :config (setq eglot-autoshutdown t)
   :hook
   (java-mode . eglot-ensure)
-  (js-mode . eglot-ensure);; npm install -g typescript-language-server typescript
+  (js-mode . eglot-ensure)
+  ;; npm install -g typescript-language-server typescript
   )
 
 (use-package eglot-java
