@@ -57,6 +57,8 @@
 (use-package treemacs
   :config (treemacs))
 
+(use-package treemacs-magit)
+
 (kill-buffer "*scratch*")
 (other-window 1)
 
