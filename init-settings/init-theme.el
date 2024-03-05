@@ -9,7 +9,7 @@
   :init (doom-modeline-mode))
 
 (use-package nerd-icons)
-;; nerd-icons-install-fonts
+;; M-x nerd-icons-install-fonts
 
 (use-package nerd-icons-ibuffer
   :hook (ibuffer-mode . nerd-icons-ibuffer-mode))

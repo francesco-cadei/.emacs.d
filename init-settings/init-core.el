@@ -3,7 +3,14 @@
 ;;; Code:
 
 (require 'package)
-(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/"))
+(setq package-archives
+      '(("GNU ELPA"     . "https://elpa.gnu.org/packages/")
+        ("MELPA Stable" . "https://stable.melpa.org/packages/")
+        ("MELPA"        . "https://melpa.org/packages/"))
+      package-archive-priorities
+      '(("GNU ELPA"     . 10)
+	("MELPA Stable" . 5)
+        ("MELPA"        . 0)))
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
@@ -44,15 +51,12 @@
 (require 'saveplace)
 (save-place-mode)
 
-(defun default-term ()
-  "A term with the default shell set."
-  (interactive)
-  (ansi-term "/bin/bash"))
-(global-set-key (kbd "C-x C-d") 'default-term)
+(use-package vterm)
+(global-set-key (kbd "C-x C-d") 'vterm)
 
 (use-package treemacs
   :config (treemacs))
-(use-package treemacs-magit)
+
 (kill-buffer "*scratch*")
 (other-window 1)
 

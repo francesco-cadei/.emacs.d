@@ -18,5 +18,8 @@
 (use-package diredfl
   :config (diredfl-global-mode))
 
+(use-package treemacs-icons-dired
+  :config (treemacs-icons-dired-mode))
+
 (provide 'init-folders)
 ;;; init-folders.el ends here

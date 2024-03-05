@@ -4,11 +4,10 @@
 
 (use-package eglot
   :config (setq eglot-autoshutdown t)
-  :hook
-  (java-mode . eglot-ensure)
-  (js-mode . eglot-ensure)
-  ;; npm install -g typescript-language-server typescript
-  )
+  :hook (java-mode . eglot-ensure))
+
+(use-package flycheck-eglot
+  :config (global-flycheck-eglot-mode))
 
 (use-package eglot-java
   :hook (java-mode . eglot-java-mode))

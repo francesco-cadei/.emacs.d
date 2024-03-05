@@ -29,11 +29,10 @@
   ("C-h v" . 'counsel-describe-variable))
 
 (use-package flyspell-correct-ivy
-  :config (setq flyspell-correct-interface 'flyspell-correct-ivy)
-  :bind ("M-$" . flyspell-correct-wrapper))
-
-(use-package ivy-hydra)
-;; useful for lsp-java getter and setter..
+  :config
+  (setq flyspell-correct-interface 'flyspell-correct-ivy)
+  :bind
+  ("M-$" . flyspell-correct-wrapper))
 
 (provide 'init-minibuffer)
 ;;; init-minibuffer.el ends here

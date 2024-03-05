@@ -4,10 +4,6 @@
 
 (use-package json-mode)
 
-
-(use-package web-mode
-  :mode ("\\.html\\'" . web-mode))
-
 (use-package markdown-mode
   :mode ("\\.md\\'" . markdown-mode))
 
