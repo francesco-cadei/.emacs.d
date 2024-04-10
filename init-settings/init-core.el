@@ -55,7 +55,10 @@
 (global-set-key (kbd "C-x C-d") 'vterm)
 
 (use-package treemacs
-  :config (treemacs))
+  :config
+  (setq treemacs-git-mode 'deferred)
+  (treemacs)
+  )
 
 (use-package treemacs-magit)
 
