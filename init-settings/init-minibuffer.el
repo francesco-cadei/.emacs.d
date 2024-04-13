@@ -23,16 +23,21 @@
   :bind
   ("M-x" . 'counsel-M-x)
   ("C-x C-f" . 'counsel-find-file)
+  ("C-c r" . 'counsel-recentf)
   ("C-x g" . 'counsel-git)
   ("C-x j" . 'counsel-git-grep)
   ("C-h f" . 'counsel-describe-function)
   ("C-h v" . 'counsel-describe-variable))
 
 (use-package flyspell-correct-ivy
-  :config
-  (setq flyspell-correct-interface 'flyspell-correct-ivy)
-  :bind
-  ("M-$" . flyspell-correct-wrapper))
+  :config (setq flyspell-correct-interface 'flyspell-correct-ivy)
+  :bind ("M-$" . flyspell-correct-wrapper))
+
+(use-package all-the-icons-ivy-rich
+  :config (all-the-icons-ivy-rich-mode))
+
+(use-package ivy-rich
+  :config (ivy-rich-mode))
 
 (provide 'init-minibuffer)
 ;;; init-minibuffer.el ends here

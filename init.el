@@ -7,7 +7,6 @@
 (require 'init-core)
 
 (require 'init-minibuffer)
-(require 'init-buffers)
 (require 'init-folders)
 
 (require 'init-completions)

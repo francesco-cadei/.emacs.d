@@ -54,10 +54,9 @@
 (use-package vterm)
 (global-set-key (kbd "C-x C-d") 'vterm)
 
-(use-package treemacs
-  :config (treemacs))
-
-(use-package treemacs-magit)
+(use-package neotree
+  :config (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
+(neotree-toggle)
 
 (kill-buffer "*scratch*")
 (other-window 1)
