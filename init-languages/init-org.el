@@ -17,12 +17,15 @@
 (setq org-format-latex-options (plist-put org-format-latex-options :background "Transparent"))
 (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
 
-(setq org-src-tab-acts-natively t)
-(setq org-confirm-babel-evaluate nil)
 (require 'ob-plantuml)
 (setq org-plantuml-jar-path (expand-file-name "~/plantuml.jar"))
-(org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
-(add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
+
+(setq org-src-tab-acts-natively t)
+(setq org-confirm-babel-evaluate nil)
+(setq org-src-lang-modes '(("bash" . sh)("plantuml" . plantuml)))
+(setq org-babel-load-languages '((plantuml . t)))
+;; (add-hook 'org-babel-after-execute-hook 'clear-image-cache)
+(add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
 
 (require 'ox-latex)
 (setq org-export-with-toc nil
@@ -38,12 +41,11 @@
   :hook (org-mode . org-bullets-mode))
 
 (use-package org-fragtog
-  :config (add-hook 'org-mode-hook 'org-fragtog-mode))
+  :hook (org-mode . org-fragtog-mode))
 
 (use-package valign
-  :config
-  (setq valign-fancy-bar t)
-  (add-hook 'org-mode-hook 'valign-mode))
+  :config (setq valign-fancy-bar t)
+  :hook (org-mode . valign-mode))
 
 (provide 'init-org)
 ;;; init-org.el ends here

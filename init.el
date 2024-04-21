@@ -7,21 +7,18 @@
 (require 'init-core)
 
 (require 'init-minibuffer)
-(require 'init-folders)
+(require 'init-directory)
 
-(require 'init-completions)
+(require 'init-complete)
 (require 'init-format)
 (require 'init-check)
 
 (require 'init-vc)
 
-(require 'init-theme)
-
 (add-to-list 'load-path (expand-file-name "init-languages" user-emacs-directory))
 
 (require 'init-org)
 (require 'init-tex)
-(require 'init-uml)
 (require 'init-extra)
 
 (require 'init-c)

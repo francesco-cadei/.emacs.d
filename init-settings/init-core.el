@@ -39,6 +39,8 @@
 (setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
 (global-auto-revert-mode)
 
+(recentf-mode)
+
 (require 'whitespace)
 (setq whitespace-display-mappings
       '((newline-mark 10 [36 10])
@@ -51,15 +53,26 @@
 (require 'saveplace)
 (save-place-mode)
 
-(use-package vterm)
-(global-set-key (kbd "C-x C-d") 'vterm)
+(use-package vterm
+  :bind ("C-x C-d" . 'vterm))
 
 (use-package neotree
-  :config (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
-(neotree-toggle)
+  :config
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  (neotree-toggle))
 
 (kill-buffer "*scratch*")
 (other-window 1)
+
+
+(load-theme 'modus-operandi t)
+
+(use-package all-the-icons
+  :if (display-graphic-p))
+;; M-x all-the-icons-install-fonts
+
+(use-package doom-modeline
+  :init (doom-modeline-mode))
 
 (provide 'init-core)
 ;;; init-core.el ends here

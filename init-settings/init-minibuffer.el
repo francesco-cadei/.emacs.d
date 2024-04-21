@@ -22,12 +22,14 @@
 (use-package counsel
   :bind
   ("M-x" . 'counsel-M-x)
+  ("M-y" . 'counsel-yank-pop)
   ("C-x C-f" . 'counsel-find-file)
-  ("C-c r" . 'counsel-recentf)
-  ("C-x g" . 'counsel-git)
-  ("C-x j" . 'counsel-git-grep)
+  ("C-x C-g" . 'counsel-git)
   ("C-h f" . 'counsel-describe-function)
-  ("C-h v" . 'counsel-describe-variable))
+  ("C-h v" . 'counsel-describe-variable)
+  ("C-c r" . 'counsel-recentf)
+  ("C-c g" . 'counsel-rg)
+  ("C-c a" . 'counsel-linux-app))
 
 (use-package flyspell-correct-ivy
   :config (setq flyspell-correct-interface 'flyspell-correct-ivy)

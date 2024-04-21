@@ -1,4 +1,4 @@
-;;; init-folders.el --- init-folders -*- lexical-binding: t -*-
+;;; init-directory.el --- init-directory -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -13,10 +13,10 @@
 (require 'dired-x)
 (setq dired-omit-files "^\\..*")
 (setq dired-omit-extensions nil)
-(add-hook 'dired-mode-hook (lambda () (dired-omit-mode)))
+(add-hook 'dired-mode-hook 'dired-omit-mode)
 
 (use-package diredfl
   :config (diredfl-global-mode))
 
-(provide 'init-folders)
-;;; init-folders.el ends here
+(provide 'init-directory)
+;;; init-directory.el ends here

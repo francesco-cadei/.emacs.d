@@ -1,10 +1,12 @@
-;;; init-completions.el --- init-completions -*- lexical-binding: t -*-
+;;; init-complete.el --- init-complete -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
 (use-package yasnippet-snippets)
 (use-package yasnippet
-  :config (yas-global-mode))
+  :config
+  (yas-reload-all)
+  (add-hook 'prog-mode-hook 'yas-minor-mode))
 
 (use-package company
   :config
@@ -18,5 +20,5 @@
 (use-package company-math
   :config (add-to-list 'company-backends 'company-math-symbols-unicode))
 
-(provide 'init-completions)
-;;; init-completions.el ends here
+(provide 'init-complete)
+;;; init-complete.el ends here
