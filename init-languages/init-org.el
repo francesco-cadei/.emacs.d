@@ -24,7 +24,6 @@
 (setq org-confirm-babel-evaluate nil)
 (setq org-src-lang-modes '(("bash" . sh)("plantuml" . plantuml)))
 (setq org-babel-load-languages '((plantuml . t)))
-;; (add-hook 'org-babel-after-execute-hook 'clear-image-cache)
 (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
 
 (require 'ox-latex)
