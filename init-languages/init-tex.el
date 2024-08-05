@@ -20,9 +20,7 @@
   (LaTeX-mode . turn-on-reftex))
 
 (use-package pdf-tools
-  :config
-  (pdf-loader-install)
-  (add-hook 'pdf-view-mode-hook 'pdf-view-fit-page-to-window)
+  :config (pdf-loader-install)
   :bind (:map pdf-view-mode-map
 	      ("C-s" . 'isearch-forward-regexp)
 	      ("C-r" . 'isearch-forward-regexp)))

@@ -3,7 +3,6 @@
 ;;; Code:
 
 (require 'package)
-(setq package-check-signature nil)
 (setq package-archives
       '(("GNU ELPA"     . "https://elpa.gnu.org/packages/")
         ("MELPA Stable" . "https://stable.melpa.org/packages/")
@@ -20,9 +19,6 @@
 
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
-
-(use-package gnu-elpa-keyring-update
-  :config (setq package-check-signature "allow-unsigned"))
 
 
 (setq inhibit-startup-message t)

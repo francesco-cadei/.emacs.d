@@ -36,15 +36,14 @@
 	"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
 	"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
-(use-package org-bullets
-  :hook (org-mode . org-bullets-mode))
-
 (use-package org-fragtog
   :hook (org-mode . org-fragtog-mode))
 
 (use-package valign
   :config (setq valign-fancy-bar t)
   :hook (org-mode . valign-mode))
+
+(use-package ox-twbs)
 
 (provide 'init-org)
 ;;; init-org.el ends here
