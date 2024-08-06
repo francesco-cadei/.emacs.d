@@ -24,8 +24,7 @@
 (require 'init-c)
 (require 'init-eglot)
 
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(load custom-file 'noerror)
+(load (expand-file-name "custom.el" user-emacs-directory) 'noerror)
 
 (provide 'init)
 ;;; init.el ends here

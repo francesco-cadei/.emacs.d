@@ -3,9 +3,8 @@
 ;;; Code:
 
 (use-package ivy
-  :config
-  (setq ivy-extra-directories '("./"))
-  (ivy-mode))
+  :init (setq ivy-extra-directories '("./"))
+  :config (ivy-mode))
 
 (require 'ivy)
 (use-package swiper
@@ -31,14 +30,14 @@
   ("C-c a" . 'counsel-linux-app))
 
 (use-package flyspell-correct-ivy
-  :config (setq flyspell-correct-interface 'flyspell-correct-ivy)
+  :init (setq flyspell-correct-interface 'flyspell-correct-ivy)
   :bind ("M-$" . flyspell-correct-wrapper))
-
-(use-package all-the-icons-ivy-rich
-  :config (all-the-icons-ivy-rich-mode))
 
 (use-package ivy-rich
   :config (ivy-rich-mode))
+
+(use-package all-the-icons-ivy-rich
+  :config (all-the-icons-ivy-rich-mode))
 
 (provide 'init-minibuffer)
 ;;; init-minibuffer.el ends here

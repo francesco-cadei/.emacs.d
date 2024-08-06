@@ -8,7 +8,7 @@
 (use-package git-timemachine)
 
 (use-package git-link
-  :config (setq git-link-open-in-browser t))
+  :init (setq git-link-open-in-browser t))
 
 (provide 'init-vc)
 ;;; init-vc.el ends here

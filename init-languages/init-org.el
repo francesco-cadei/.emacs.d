@@ -40,7 +40,7 @@
   :hook (org-mode . org-fragtog-mode))
 
 (use-package valign
-  :config (setq valign-fancy-bar t)
+  :init (setq valign-fancy-bar t)
   :hook (org-mode . valign-mode))
 
 (use-package ox-twbs)

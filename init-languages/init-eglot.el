@@ -3,7 +3,7 @@
 ;;; Code:
 
 (use-package eglot
-  :config (setq eglot-autoshutdown t)
+  :init (setq eglot-autoshutdown t)
   :hook (java-mode . eglot-ensure))
 
 (use-package flycheck-eglot

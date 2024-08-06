@@ -10,9 +10,8 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 
 (use-package flycheck
-  :config
-  (setq flycheck-emacs-lisp-load-path 'inherit)
-  (global-flycheck-mode))
+  :init (setq flycheck-emacs-lisp-load-path 'inherit)
+  :config (global-flycheck-mode))
 
 (provide 'init-check)
 ;;; init-check.el ends here
