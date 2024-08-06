@@ -31,7 +31,7 @@
 (setq kill-buffer-query-functions nil)
 (setq confirm-kill-processes nil)
 
-(global-set-key (kbd "C-x k") 'kill-current-buffer)
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
 (setq browse-url-browser-function 'browse-url-firefox)
 
 (add-hook 'prog-mode-hook 'linum-mode)
@@ -59,9 +59,6 @@
 (use-package neotree
   :init (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
   :config (neotree-show))
-
-(kill-buffer "*scratch*")
-(other-window 1)
 
 
 (load-theme 'modus-operandi t)
