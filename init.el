@@ -22,7 +22,7 @@
 (require 'init-extra)
 
 (require 'init-c)
-(require 'init-eglot)
+;; (require 'init-eglot)
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)

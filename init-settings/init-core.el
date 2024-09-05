@@ -11,19 +11,15 @@
       '(("GNU ELPA"     . 10)
 	("MELPA Stable" . 5)
         ("MELPA"        . 0)))
-(package-initialize)
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 
-(require 'use-package-ensure)
-(setq use-package-always-ensure t)
+(eval-when-compile
+  (require 'use-package)
+  (setq use-package-always-ensure t))
 
-
-(setq inhibit-startup-message t)
-(tool-bar-mode 0)
-(scroll-bar-mode 0)
 
 (setq make-backup-files nil)
 (setq delete-by-moving-to-trash t)

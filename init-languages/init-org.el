@@ -17,6 +17,9 @@
 (setq org-format-latex-options (plist-put org-format-latex-options :background "Transparent"))
 (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
 
+(use-package plantuml-mode)
+;; M-x plantuml-download-jar
+
 (require 'ob-plantuml)
 (setq org-plantuml-jar-path (expand-file-name "~/plantuml.jar"))
 
