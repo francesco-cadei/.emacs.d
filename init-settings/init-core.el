@@ -45,17 +45,6 @@
 (delete 'empty whitespace-style)
 (global-whitespace-mode)
 
-(require 'saveplace)
-(save-place-mode)
-
-(use-package vterm
-  :bind ("C-x C-d" . 'vterm))
-
-(use-package neotree
-  :init (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-  :config (neotree-show))
-
-
 (load-theme 'modus-operandi t)
 
 (use-package doom-modeline
@@ -64,6 +53,17 @@
 (use-package all-the-icons
   :if (display-graphic-p))
 ;; M-x all-the-icons-install-fonts
+
+
+(require 'saveplace)
+(save-place-mode)
+
+(use-package vterm
+  :bind ("C-x C-d" . vterm))
+
+(use-package neotree
+  :init (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  :config (neotree-show))
 
 (provide 'init-core)
 ;;; init-core.el ends here

@@ -7,13 +7,13 @@
 (add-hook 'dired-mode-hook 'dired-hide-details-mode)
 (add-hook 'dired-mode-hook 'auto-revert-mode)
 
-(use-package sudo-edit
-  :config (sudo-edit-indicator-mode))
-
 (require 'dired-x)
 (setq dired-omit-files "^\\..*")
 (setq dired-omit-extensions nil)
 (add-hook 'dired-mode-hook 'dired-omit-mode)
+
+(use-package sudo-edit
+  :config (sudo-edit-indicator-mode))
 
 (use-package diredfl
   :config (diredfl-global-mode))
