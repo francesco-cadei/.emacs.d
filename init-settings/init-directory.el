@@ -11,6 +11,7 @@
 (setq dired-omit-files "^\\..*")
 (setq dired-omit-extensions nil)
 (add-hook 'dired-mode-hook 'dired-omit-mode)
+(setq dired-guess-shell-alist-user '(("\\.pdf\\'" "firefox")))
 
 (use-package sudo-edit
   :config (sudo-edit-indicator-mode))

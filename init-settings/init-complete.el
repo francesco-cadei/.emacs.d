@@ -2,16 +2,16 @@
 ;;; Commentary:
 ;;; Code:
 
-(use-package yasnippet-snippets)
-(use-package yasnippet
-  :config (yas-global-mode))
-
 (use-package company
   :init
   (setq company-idle-delay 0)
   (setq company-minimum-prefix-length 1)
   (setq company-tooltip-align-annotations t)
-  (setq company-backends '((company-yasnippet :with company-tempo company-capf company-keywords company-semantic company-files)))
+  (setq company-backends '((company-tempo
+			    company-capf
+			    company-keywords
+			    company-semantic
+			    company-files)))
   (setq company-transformers '(company-sort-by-backend-importance))
   :config
   (global-company-mode))
