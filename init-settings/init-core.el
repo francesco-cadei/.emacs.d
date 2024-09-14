@@ -17,6 +17,7 @@
   (package-install 'use-package))
 
 (eval-when-compile
+  (require 'use-package)
   (require 'use-package-ensure)
   (setq use-package-always-ensure t))
 
@@ -42,6 +43,7 @@
       '((newline-mark 10 [36 10])
 	(tab-mark 9 [187 9] [92 9])))
 (delete 'spaces whitespace-style)
+(delete 'lines whitespace-style)
 (delete 'empty whitespace-style)
 (global-whitespace-mode)
 
@@ -53,6 +55,10 @@
 
 (use-package doom-modeline
   :config (doom-modeline-mode))
+
+(use-package exec-path-from-shell
+  :config (when (memq window-system '(mac ns x))
+	    (exec-path-from-shell-initialize)))
 
 (use-package vterm
   :bind ("C-x C-d" . vterm))

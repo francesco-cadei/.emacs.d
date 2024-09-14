@@ -3,18 +3,10 @@
 ;;; Code:
 
 (use-package company
-  :init
-  (setq company-idle-delay 0)
-  (setq company-minimum-prefix-length 1)
-  (setq company-tooltip-align-annotations t)
-  (setq company-backends '((company-tempo
-			    company-capf
-			    company-keywords
-			    company-semantic
-			    company-files)))
-  (setq company-transformers '(company-sort-by-backend-importance))
-  :config
-  (global-company-mode))
+  :init (setq company-idle-delay 0
+	      company-minimum-prefix-length 1
+	      company-tooltip-align-annotations t)
+  :config (global-company-mode))
 
 (use-package company-math
   :init (add-to-list 'company-backends 'company-math-symbols-unicode))
