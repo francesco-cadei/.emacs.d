@@ -3,8 +3,9 @@
 ;;; Code:
 
 (use-package ivy
-  :init (setq ivy-extra-directories '("./"))
-  :config (ivy-mode))
+  :config
+  (setq ivy-extra-directories '("./"))
+  (ivy-mode))
 
 (require 'ivy)
 (use-package swiper
@@ -13,28 +14,19 @@
    ("C-r" . 'swiper)
    ("C-M-s" . 'swiper-thing-at-point)
    ("C-M-r" . 'swiper-thing-at-point)
+   ("M-x" . 'counsel-M-x)
+   ("M-y" . 'counsel-yank-pop)
+   ("C-x C-f" . 'counsel-find-file)
+   ("C-h f" . 'counsel-describe-function)
+   ("C-h v" . 'counsel-describe-variable)
+   ("C-c r" . 'counsel-recentf)
+   ("C-c g" . 'counsel-rg)
    :map swiper-map
    ("C-s" . 'ivy-next-line-or-history)
    ("C-r" . 'ivy-previous-line-or-history)))
 
-(use-package counsel
-  :bind
-  ("M-x" . 'counsel-M-x)
-  ("M-y" . 'counsel-yank-pop)
-  ("C-x C-f" . 'counsel-find-file)
-  ("C-x C-g" . 'counsel-git)
-  ("C-h f" . 'counsel-describe-function)
-  ("C-h v" . 'counsel-describe-variable)
-  ("C-c r" . 'counsel-recentf)
-  ("C-c g" . 'counsel-rg)
-  ("C-c a" . 'counsel-linux-app))
-
-(use-package flyspell-correct-ivy
-  :init (setq flyspell-correct-interface 'flyspell-correct-ivy)
-  :bind ("M-$" . flyspell-correct-wrapper))
-
-(use-package ivy-rich
-  :config (ivy-rich-mode))
+(use-package ivy-rich)
+(add-hook 'after-init-hook 'ivy-rich-mode)
 
 (use-package all-the-icons-ivy-rich
   :config (all-the-icons-ivy-rich-mode))

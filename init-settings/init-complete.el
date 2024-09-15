@@ -3,13 +3,10 @@
 ;;; Code:
 
 (use-package company
-  :init (setq company-idle-delay 0
-	      company-minimum-prefix-length 1
-	      company-tooltip-align-annotations t)
-  :config (global-company-mode))
-
-(use-package company-math
-  :init (add-to-list 'company-backends 'company-math-symbols-unicode))
+  :config (setq company-idle-delay 0
+		company-minimum-prefix-length 1
+		company-tooltip-align-annotations t))
+(add-hook 'after-init-hook 'global-company-mode)
 
 (provide 'init-complete)
 ;;; init-complete.el ends here

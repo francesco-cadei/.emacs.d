@@ -23,7 +23,7 @@
   :hook (org-mode . org-fragtog-mode))
 
 (use-package valign
-  :init (setq valign-fancy-bar t)
+  :config (setq valign-fancy-bar t)
   :hook (org-mode . valign-mode))
 
 (use-package plantuml-mode)

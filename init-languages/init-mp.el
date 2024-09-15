@@ -2,16 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
-(use-package yaml-mode)
-
-(use-package dart-mode
-  :hook (dart-mode . flutter-test-mode))
-
-(use-package flutter
-  :after dart-mode
-  :custom (flutter-sdk-path "/home/fra/development/flutter/bin/")
-  :bind (:map dart-mode-map
-              ("C-M-x" . 'flutter-run-or-hot-reload)))
+(use-package eglot)
+(add-hook 'python-mode-hook 'eglot-ensure)
 
 (provide 'init-mp)
 ;;; init-mp.el ends here
