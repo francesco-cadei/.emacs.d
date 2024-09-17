@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
+(use-package markdown-mode)
+
 (use-package eglot)
 (add-hook 'python-mode-hook 'eglot-ensure)
 
