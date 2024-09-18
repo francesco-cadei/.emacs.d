@@ -18,6 +18,7 @@
 (add-to-list 'load-path (expand-file-name "init-languages" user-emacs-directory))
 
 (require 'init-org)
+(require 'init-org-exports)
 (require 'init-mp)
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))

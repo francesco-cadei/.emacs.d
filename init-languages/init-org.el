@@ -4,12 +4,12 @@
 
 (require 'org)
 (require 'org-tempo)
-(setq org-startup-indented t)
-(setq org-startup-folded nil)
-(setq org-startup-shrink-all-tables t)
-(setq org-startup-align-all-tables t)
-(setq org-startup-with-latex-preview t)
-(setq org-startup-with-inline-images t)
+(setq org-startup-indented t
+      org-startup-folded nil)
+(setq org-startup-shrink-all-tables t
+      org-startup-align-all-tables t)
+(setq org-startup-with-latex-preview t
+      org-startup-with-inline-images t)
 (add-hook 'org-mode-hook 'linum-mode)
 (add-hook 'org-mode-hook 'visual-line-mode)
 
@@ -31,29 +31,11 @@
 (require 'ob-plantuml)
 (setq org-plantuml-jar-path (expand-file-name "~/plantuml.jar"))
 
-(setq org-src-tab-acts-natively t)
-(setq org-confirm-babel-evaluate nil)
+(setq org-src-tab-acts-natively t
+      org-confirm-babel-evaluate nil)
 (setq org-src-lang-modes '(("bash" . sh)("plantuml" . plantuml)))
 (setq org-babel-load-languages '((plantuml . t)))
 (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
-
-
-(use-package ox-twbs)
-
-(require 'ox-latex)
-(setq org-export-with-toc nil
-      org-export-with-section-numbers nil)
-(setq org-latex-packages-alist '(("" "minted")("" "fullpage"))
-      org-latex-listings 'minted
-      org-latex-pdf-process
-      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-	"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-	"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
-
-(setq org-file-apps '((auto-mode . emacs)
-		      (directory . emacs)
-		      ("\\.pdf\\'" . "firefox %s")
-		      ("\\.html\\'" . "firefox %s")))
 
 (provide 'init-org)
 ;;; init-org.el ends here
