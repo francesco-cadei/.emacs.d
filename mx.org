@@ -1,8 +1,0 @@
-* all-the-icons
-all-the-icons-install-fonts
-
-
-* plantuml-mode
-plantuml-download-jar
-
-

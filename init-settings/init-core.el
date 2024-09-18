@@ -58,7 +58,7 @@
   :init (doom-modeline-mode))
 
 (use-package vterm
-  :bind ("C-x C-d" . vterm))
+  :bind (("C-x C-d" . vterm)))
 
 (provide 'init-core)
 ;;; init-core.el ends here

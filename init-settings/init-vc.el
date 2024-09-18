@@ -3,7 +3,7 @@
 ;;; Code:
 
 (use-package magit
-  :bind ("C-x m" . magit-status))
+  :bind (("C-x m" . magit-status)))
 
 (use-package markdown-mode)
 
