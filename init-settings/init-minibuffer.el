@@ -2,34 +2,31 @@
 ;;; Commentary:
 ;;; Code:
 
-(use-package ivy
-  :config
-  (setq ivy-extra-directories '("./"))
-  (ivy-mode))
+(use-package vertico
+  :bind (:map vertico-map
+	      ("DEL" . vertico-directory-delete-char))
+  :config (vertico-mode))
 
-(require 'ivy)
-(use-package swiper
-  :bind
-  (("C-s" . 'swiper)
-   ("C-r" . 'swiper)
-   ("C-M-s" . 'swiper-thing-at-point)
-   ("C-M-r" . 'swiper-thing-at-point)
-   ("M-x" . 'counsel-M-x)
-   ("M-y" . 'counsel-yank-pop)
-   ("C-x C-f" . 'counsel-find-file)
-   ("C-h f" . 'counsel-describe-function)
-   ("C-h v" . 'counsel-describe-variable)
-   ("C-c r" . 'counsel-recentf)
-   ("C-c g" . 'counsel-rg)
-   :map swiper-map
-   ("C-s" . 'ivy-next-line-or-history)
-   ("C-r" . 'ivy-previous-line-or-history)))
+(use-package vertico-prescient
+  :config (vertico-prescient-mode))
 
-(use-package ivy-rich)
-(add-hook 'after-init-hook 'ivy-rich-mode)
+(use-package marginalia
+  :config (marginalia-mode))
 
-(use-package all-the-icons-ivy-rich
-  :config (all-the-icons-ivy-rich-mode))
+(use-package consult
+  :bind (("C-x M-:" . consult-complex-command)
+	 ("C-x b" . consult-buffer)
+	 ("C-x 4 b" . consult-buffer-other-window)
+	 ("C-x 5 b" . consult-buffer-other-frame)
+	 ("C-x r b" . consult-bookmark)
+	 ("C-x p b" . consult-project-buffer)
+	 ("M-y" . consult-yank-pop)
+	 ("C-c g" . consult-ripgrep)
+	 ("C-s" . consult-line)
+	 ("C-r" . consult-line)
+	 :map minibuffer-local-map
+	 ("C-s" . vertico-next)
+	 ("C-r" . vertico-previous)))
 
 (provide 'init-minibuffer)
 ;;; init-minibuffer.el ends here

@@ -56,10 +56,6 @@
 (use-package doom-modeline
   :config (doom-modeline-mode))
 
-(use-package exec-path-from-shell
-  :config (when (memq window-system '(mac ns x))
-	    (exec-path-from-shell-initialize)))
-
 (use-package vterm
   :bind ("C-x C-d" . vterm))
 

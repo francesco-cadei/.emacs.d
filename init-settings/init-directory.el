@@ -19,5 +19,7 @@
 (use-package diredfl
   :config (diredfl-global-mode))
 
+(use-package trashed)
+
 (provide 'init-directory)
 ;;; init-directory.el ends here

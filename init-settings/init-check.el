@@ -9,9 +9,6 @@
 (ispell-hunspell-add-multi-dic "en_US,it_IT")
 (add-hook 'text-mode-hook 'flyspell-mode)
 
-(use-package flyspell-correct-ivy
-  :bind ("M-$" . 'flyspell-correct-wrapper))
-
 (use-package flycheck
   :config
   (setq flycheck-emacs-lisp-load-path 'inherit)

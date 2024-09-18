@@ -2,10 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
-(use-package markdown-mode)
-
-(use-package eglot)
-(add-hook 'python-mode-hook 'eglot-ensure)
+(use-package eglot
+  :hook (python-mode . eglot-ensure))
 
 (provide 'init-mp)
 ;;; init-mp.el ends here
