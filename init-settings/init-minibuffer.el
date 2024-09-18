@@ -3,15 +3,15 @@
 ;;; Code:
 
 (use-package vertico
+  :init (vertico-mode)
   :bind (:map vertico-map
-	      ("DEL" . vertico-directory-delete-char))
-  :config (vertico-mode))
+	      ("DEL" . vertico-directory-delete-char)))
 
 (use-package vertico-prescient
-  :config (vertico-prescient-mode))
+  :init (vertico-prescient-mode))
 
 (use-package marginalia
-  :config (marginalia-mode))
+  :init (marginalia-mode))
 
 (use-package consult
   :bind (("C-x M-:" . consult-complex-command)

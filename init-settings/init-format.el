@@ -8,7 +8,7 @@
 (electric-pair-mode)
 
 (use-package aggressive-indent
-  :config (global-aggressive-indent-mode))
+  :init (global-aggressive-indent-mode))
 
 (provide 'init-format)
 ;;; init-format.el ends here

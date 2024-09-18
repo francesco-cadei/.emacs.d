@@ -19,6 +19,7 @@
 (eval-when-compile
   (require 'use-package)
   (require 'use-package-ensure)
+  (setq use-package-always-defer t)
   (setq use-package-always-ensure t))
 
 
@@ -54,7 +55,7 @@
   :if (display-graphic-p))
 
 (use-package doom-modeline
-  :config (doom-modeline-mode))
+  :init (doom-modeline-mode))
 
 (use-package vterm
   :bind ("C-x C-d" . vterm))

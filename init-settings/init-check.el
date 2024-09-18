@@ -6,7 +6,7 @@
 (setq ispell-program-name "hunspell")
 
 (use-package flycheck
-  :config
+  :init
   (setq flycheck-emacs-lisp-load-path 'inherit)
   (global-flycheck-mode))
 

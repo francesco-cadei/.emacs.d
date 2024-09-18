@@ -3,7 +3,7 @@
 ;;; Code:
 
 (use-package corfu
-  :config
+  :init
   (setq corfu-auto t)
   (global-corfu-mode))
 

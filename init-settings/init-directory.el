@@ -14,10 +14,10 @@
 (setq dired-guess-shell-alist-user '(("\\.pdf\\'" "firefox")))
 
 (use-package sudo-edit
-  :config (sudo-edit-indicator-mode))
+  :init (sudo-edit-indicator-mode))
 
 (use-package diredfl
-  :config (diredfl-global-mode))
+  :init (diredfl-global-mode))
 
 (use-package trashed)
 
