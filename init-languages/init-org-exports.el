@@ -2,10 +2,13 @@
 ;;; Commentary:
 ;;; Code:
 
+(require 'org)
 (setq org-file-apps '((auto-mode . emacs)
 		      (directory . emacs)
 		      ("\\.pdf\\'" . "firefox %s")
 		      ("\\.html\\'" . "firefox %s")))
+
+(use-package ox-twbs)
 
 (require 'ox-latex)
 (setq org-export-with-toc nil
@@ -16,8 +19,6 @@
       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
 	"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
 	"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
-
-(use-package ox-twbs)
 
 (provide 'init-org-exports)
 ;;; init-org-exports.el ends here
