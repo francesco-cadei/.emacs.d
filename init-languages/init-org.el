@@ -20,11 +20,11 @@
       (plist-put org-format-latex-options :scale 1.5))
 
 (use-package org-fragtog
-  :hook (org-mode . org-fragtog-mode))
+  :hook ((org-mode . org-fragtog-mode)))
 
 (use-package valign
   :init (setq valign-fancy-bar t)
-  :hook (org-mode . valign-mode))
+  :hook ((org-mode . valign-mode)))
 
 (use-package plantuml-mode)
 
