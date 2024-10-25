@@ -11,7 +11,9 @@
 (setq dired-omit-files "^\\..*")
 (setq dired-omit-extensions nil)
 (add-hook 'dired-mode-hook 'dired-omit-mode)
-(setq dired-guess-shell-alist-user '(("\\.pdf\\'" "firefox")))
+(setq dired-guess-shell-alist-user '(("\\.pdf\\'" "firefox")
+				     ("\\.mp4\\'" "mpv")
+				     ("\\.mkv\\'" "mpv")))
 
 (use-package sudo-edit
   :init (sudo-edit-indicator-mode))
