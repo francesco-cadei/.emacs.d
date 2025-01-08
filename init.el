@@ -20,8 +20,6 @@
 (require 'init-org)
 (require 'init-org-exports)
 
-(require 'init-mp)
-
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
 
