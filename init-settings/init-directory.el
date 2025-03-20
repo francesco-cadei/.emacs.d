@@ -21,6 +21,10 @@
 (use-package diredfl
   :init (diredfl-global-mode))
 
+(use-package dired-rsync
+  :bind (:map dired-mode-map
+              ("C-c C-r" . dired-rsync)))
+
 (use-package trashed)
 
 (provide 'init-directory)
