@@ -1,7 +1,7 @@
 *
 
 !.gitignore
-!mx.org
+!M-x.org
 !early-init.el
 !init.el
 !LICENSE.txt
