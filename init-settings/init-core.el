@@ -31,10 +31,10 @@
 (recentf-mode -1)
 (recentf-mode)
 
-(global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-x k") 'kill-current-buffer)
 (setq browse-url-browser-function 'browse-url-firefox)
 
-(add-hook 'prog-mode-hook 'linum-mode)
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (setq column-number-mode t)
 (setq visual-line-fringe-indicators '(nil right-curly-arrow))
 (global-auto-revert-mode)
@@ -47,6 +47,8 @@
 (delete 'lines whitespace-style)
 (delete 'empty whitespace-style)
 (global-whitespace-mode)
+
+(setq initial-scratch-message ";; -*- lexical-binding: t; -*-\n\n")
 
 
 (load-theme 'modus-operandi t)

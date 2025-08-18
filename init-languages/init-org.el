@@ -10,7 +10,7 @@
       org-startup-align-all-tables t)
 (setq org-startup-with-latex-preview t
       org-startup-with-inline-images t)
-(add-hook 'org-mode-hook 'linum-mode)
+(add-hook 'org-mode-hook 'display-line-numbers-mode)
 (add-hook 'org-mode-hook 'visual-line-mode)
 
 (setq org-highlight-latex-and-related '(latex))

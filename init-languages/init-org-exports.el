@@ -12,7 +12,7 @@
 (setq org-export-with-toc nil
       org-export-with-section-numbers nil)
 (setq org-latex-packages-alist '(("" "minted")("" "fullpage"))
-      org-latex-listings 'minted
+      org-latex-src-block-backend 'minted
       org-latex-pdf-process
       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
 	"pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
