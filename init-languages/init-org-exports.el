@@ -8,6 +8,7 @@
 		      ("\\.pdf\\'" . "firefox %s")
 		      ("\\.html\\'" . "firefox %s")))
 
+
 (require 'ox-latex)
 (setq org-export-with-toc nil
       org-export-with-section-numbers nil)

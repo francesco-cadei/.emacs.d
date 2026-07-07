@@ -26,16 +26,10 @@
   :init (setq valign-fancy-bar t)
   :hook ((org-mode . valign-mode)))
 
-(use-package plantuml-mode)
-
-(require 'ob-plantuml)
-(setq org-plantuml-jar-path (expand-file-name "~/plantuml.jar"))
-
 (setq org-src-tab-acts-natively t
       org-confirm-babel-evaluate nil)
-(setq org-src-lang-modes '(("bash" . sh)("plantuml" . plantuml)))
-(setq org-babel-load-languages '((plantuml . t)))
-(add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
+(setq org-src-lang-modes '(("bash" . sh)))
+(setq org-babel-load-languages '())
 
 (provide 'init-org)
 ;;; init-org.el ends here

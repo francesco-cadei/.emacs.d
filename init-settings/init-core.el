@@ -55,6 +55,7 @@
 
 (use-package all-the-icons
   :if (display-graphic-p))
+;; all-the-icons-install-fonts
 
 (use-package doom-modeline
   :init (doom-modeline-mode))
