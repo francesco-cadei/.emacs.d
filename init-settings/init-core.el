@@ -48,12 +48,12 @@
 
 (load-theme 'modus-operandi t)
 
-(use-package all-the-icons
-  :if (display-graphic-p))
-;; all-the-icons-install-fonts
+(use-package nerd-icons)
+;; nerd-icons-install-fonts
 
 (use-package doom-modeline
   :init (doom-modeline-mode))
+
 
 (use-package vterm
   :bind (("C-x C-d" . vterm-other-window)))
