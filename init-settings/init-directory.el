@@ -11,19 +11,13 @@
 (setq dired-omit-files "^\\..*")
 (setq dired-omit-extensions nil)
 (add-hook 'dired-mode-hook 'dired-omit-mode)
-(setq dired-guess-shell-alist-user '(("\\.pdf\\'" "firefox")
-				     ("\\.mp4\\'" "mpv")
-				     ("\\.mkv\\'" "mpv")))
+(setq dired-guess-shell-alist-user '(("\\.pdf\\'" "firefox")))
 
-(use-package sudo-edit
-  :init (sudo-edit-indicator-mode))
+(require 'tramp)
+(setq tramp-allow-unsafe-temporary-files t)
 
-(use-package diredfl
-  :init (diredfl-global-mode))
-
-(use-package dired-rsync
-  :bind (:map dired-mode-map
-              ("C-c C-r" . dired-rsync)))
+(use-package async
+  :init (dired-async-mode))
 
 (use-package trashed)
 
