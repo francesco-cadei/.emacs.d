@@ -25,10 +25,21 @@
   :hook ((org-mode . org-cdlatex-mode)))
 
 
-(setq org-src-tab-acts-natively t
-      org-confirm-babel-evaluate nil)
-(setq org-src-lang-modes '(("bash" . sh)))
-(setq org-babel-load-languages '())
+(setq org-src-tab-acts-natively t)
+(setq org-confirm-babel-evaluate nil)
+(setq org-src-lang-modes '(("bash" . sh)("latex" . latex)))
+
+(require 'ob-latex)
+(setq org-babel-latex-preamble
+      (lambda (_) "\\documentclass[tikz,border=2pt]{standalone}\n"))
+(setq org-babel-default-header-args:latex
+      '((:results . "file graphics")
+        (:exports . "results")
+        (:headers . ("\\usepackage{amsmath}"))))
+(setq org-babel-latex-pdf-svg-process
+      "pdftocairo -svg %f %O")
+
+(setq org-babel-load-languages '((latex . t)))
 
 (provide 'init-org)
 ;;; init-org.el ends here
