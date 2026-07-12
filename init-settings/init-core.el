@@ -12,15 +12,10 @@
 	("MELPA Stable" . 5)
         ("MELPA"        . 0)))
 
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-
-(eval-when-compile
-  (require 'use-package)
-  (require 'use-package-ensure)
-  (setq use-package-always-defer t)
-  (setq use-package-always-ensure t))
+(require 'use-package)
+(require 'use-package-ensure)
+(setq use-package-always-defer t)
+(setq use-package-always-ensure t)
 
 
 (setq make-backup-files nil)
