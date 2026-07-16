@@ -3,12 +3,17 @@
 ;;; Code:
 
 (require 'org)
+(require 'org-tempo)
 (add-hook 'org-mode-hook 'display-line-numbers-mode)
 (add-hook 'org-mode-hook 'visual-line-mode)
 (setq org-startup-indented t)
-(require 'org-tempo)
 (setq org-startup-align-all-tables t
       org-startup-shrink-all-tables t)
+(setq org-startup-with-inline-images t)
+
+(require 'pixel-scroll)
+(setq pixel-scroll-precision-interpolate-mice nil)
+(add-hook 'org-mode-hook 'pixel-scroll-precision-mode)
 
 
 (setq org-highlight-latex-and-related '(native))
@@ -24,22 +29,13 @@
 (use-package cdlatex
   :hook ((org-mode . org-cdlatex-mode)))
 
+(add-to-list 'org-latex-packages-alist '("" "tikz" t))
+
 
 (setq org-src-tab-acts-natively t)
 (setq org-confirm-babel-evaluate nil)
-(setq org-src-lang-modes '(("bash" . sh)("latex" . latex)))
-
-(require 'ob-latex)
-(setq org-babel-latex-preamble
-      (lambda (_) "\\documentclass[tikz,border=2pt]{standalone}\n"))
-(setq org-babel-default-header-args:latex
-      '((:results . "file graphics")
-        (:exports . "results")
-        (:headers . ("\\usepackage{amsmath}"))))
-(setq org-babel-latex-pdf-svg-process
-      "pdftocairo -svg %f %O")
-
-(setq org-babel-load-languages '((latex . t)))
+(setq org-src-lang-modes '(("bash" . sh)))
+(setq org-babel-load-languages '())
 
 (provide 'init-org)
 ;;; init-org.el ends here
