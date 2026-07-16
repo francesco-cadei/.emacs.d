@@ -3,7 +3,7 @@
 ;;; Code:
 
 (use-package vertico
-  :init (vertico-mode)
+  :init (vertico-mode)			;M-RET
   :bind (:map vertico-map
 	      ("DEL" . vertico-directory-delete-char)))
 

@@ -7,13 +7,20 @@
 (add-hook 'org-mode-hook 'display-line-numbers-mode)
 (add-hook 'org-mode-hook 'visual-line-mode)
 (setq org-startup-indented t)
+(setq org-startup-with-inline-images t)
 (setq org-startup-align-all-tables t
       org-startup-shrink-all-tables t)
-(setq org-startup-with-inline-images t)
+(define-key org-mode-map (kbd "C-c y") 'yank-media)
 
 (require 'pixel-scroll)
 (setq pixel-scroll-precision-interpolate-mice nil)
 (add-hook 'org-mode-hook 'pixel-scroll-precision-mode)
+
+
+(setq org-src-tab-acts-natively t)
+(setq org-confirm-babel-evaluate nil)
+(setq org-src-lang-modes '(("bash" . sh)))
+(setq org-babel-load-languages '())
 
 
 (setq org-highlight-latex-and-related '(native))
@@ -30,12 +37,6 @@
   :hook ((org-mode . org-cdlatex-mode)))
 
 (add-to-list 'org-latex-packages-alist '("" "tikz" t))
-
-
-(setq org-src-tab-acts-natively t)
-(setq org-confirm-babel-evaluate nil)
-(setq org-src-lang-modes '(("bash" . sh)))
-(setq org-babel-load-languages '())
 
 (provide 'init-org)
 ;;; init-org.el ends here

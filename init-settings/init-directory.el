@@ -10,7 +10,7 @@
 (require 'dired-x)
 (setq dired-omit-files "^\\..*")
 (setq dired-omit-extensions nil)
-(add-hook 'dired-mode-hook 'dired-omit-mode)
+(add-hook 'dired-mode-hook 'dired-omit-mode) ;C-x M-o
 (setq dired-guess-shell-alist-user '(("\\.pdf\\'" "firefox")))
 
 (require 'tramp)
