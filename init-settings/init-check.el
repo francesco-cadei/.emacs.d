@@ -8,6 +8,7 @@
 (use-package flycheck
   :init
   (setq flycheck-emacs-lisp-load-path 'inherit)
+  (setq flycheck-global-modes '(not lisp-interaction-mode))
   (global-flycheck-mode))
 
 (provide 'init-check)
