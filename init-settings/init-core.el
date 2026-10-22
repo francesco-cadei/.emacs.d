@@ -18,22 +18,6 @@
 (setq use-package-always-ensure t)
 
 
-(setq make-backup-files nil)
-(setq delete-by-moving-to-trash t)
-(defalias 'yes-or-no-p 'y-or-n-p)
-(setq kill-buffer-query-functions nil)
-(setq confirm-kill-processes nil)
-(recentf-mode -1)
-(recentf-mode)
-
-(global-set-key (kbd "C-x k") 'kill-current-buffer)
-(setq browse-url-browser-function 'browse-url-firefox)
-
-(add-hook 'prog-mode-hook 'display-line-numbers-mode)
-(setq column-number-mode t)
-(setq visual-line-fringe-indicators '(nil right-curly-arrow))
-(global-auto-revert-mode)
-
 (require 'whitespace)
 (setq whitespace-display-mappings
       '((newline-mark 10 [36 10])
@@ -43,7 +27,29 @@
 (delete 'empty whitespace-style)
 (global-whitespace-mode)
 
+(setq make-backup-files nil)
+(setq delete-by-moving-to-trash t)
+(setq use-short-answers t)
+(setq kill-buffer-query-functions nil)
+(setq confirm-kill-processes nil)
+(recentf-mode -1)
+(recentf-mode)
+
+(setq browse-url-browser-function 'browse-url-firefox)
 (setq initial-scratch-message ";; -*- lexical-binding: t; -*-\n\n")
+(global-set-key (kbd "C-x k") 'kill-current-buffer)
+
+(setq display-line-numbers-width-start t)
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'prog-mode-hook 'column-number-mode)
+(global-auto-revert-mode)
+
+
+(setq scroll-conservatively 101)
+(setq auto-window-vscroll nil)
+(require 'pixel-scroll)
+(setq pixel-scroll-precision-interpolate-mice nil)
+(pixel-scroll-precision-mode)
 
 
 (load-theme 'modus-operandi t)

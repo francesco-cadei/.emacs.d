@@ -4,7 +4,6 @@
 
 (require 'org)
 (require 'org-tempo)
-(add-hook 'org-mode-hook 'display-line-numbers-mode)
 (add-hook 'org-mode-hook 'visual-line-mode)
 (setq org-startup-indented t)
 (setq org-startup-align-all-tables t
@@ -16,11 +15,6 @@
 (setq org-startup-with-inline-images t)
 (setq org-yank-image-save-method "./org-media/")
 (define-key org-mode-map (kbd "C-c y") 'yank-media)
-
-
-(require 'pixel-scroll)
-(setq pixel-scroll-precision-interpolate-mice nil)
-(add-hook 'org-mode-hook 'pixel-scroll-precision-mode)
 
 
 (setq org-src-tab-acts-natively t)
