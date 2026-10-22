@@ -56,7 +56,7 @@
 
 
 (use-package vterm
-  :bind (("C-x C-d" . vterm-other-window)))
+  :bind ("C-x C-d" . vterm-other-window))
 
 (provide 'init-core)
 ;;; init-core.el ends here

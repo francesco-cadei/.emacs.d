@@ -3,7 +3,7 @@
 ;;; Code:
 
 (use-package magit
-  :bind (("C-x m" . magit-status)))
+  :bind ("C-x m" . magit-status))
 
 (provide 'init-vc)
 ;;; init-vc.el ends here

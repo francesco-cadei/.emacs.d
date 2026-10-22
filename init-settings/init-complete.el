@@ -3,9 +3,8 @@
 ;;; Code:
 
 (use-package corfu
-  :init
-  (setq corfu-auto t)
-  (global-corfu-mode))
+  :custom (corfu-auto t)
+  :init (global-corfu-mode))
 
 (provide 'init-complete)
 ;;; init-complete.el ends here

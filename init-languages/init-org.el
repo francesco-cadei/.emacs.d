@@ -14,8 +14,9 @@
 (setq org-image-actual-width t
       org-image-max-width 0.8)
 (setq org-startup-with-inline-images t)
-(setq org-yank-image-save-method "./org-images/")
+(setq org-yank-image-save-method "./org-media/")
 (define-key org-mode-map (kbd "C-c y") 'yank-media)
+
 
 (require 'pixel-scroll)
 (setq pixel-scroll-precision-interpolate-mice nil)
