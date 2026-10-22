@@ -6,16 +6,16 @@
 (require 'org-tempo)
 (add-hook 'org-mode-hook 'visual-line-mode)
 (setq org-startup-indented t)
-(setq org-startup-align-all-tables t
-      org-startup-shrink-all-tables t)
+(setq org-startup-align-all-tables t)
+(setq org-startup-shrink-all-tables t)
 
 (setq org-image-align 'center)
 (setq org-image-actual-width t
       org-image-max-width 0.8)
 (setq org-startup-with-inline-images t)
-(setq org-yank-image-save-method "./org-media/")
-(define-key org-mode-map (kbd "C-c y") 'yank-media)
 
+(add-to-list 'org-file-apps '("\\.pdf\\'" . "firefox %s"))
+(add-to-list 'org-file-apps '("\\.pdf::\\([0-9]+\\)\\'" . "firefox file://%s#page=%1"))
 
 (setq org-src-tab-acts-natively t)
 (setq org-confirm-babel-evaluate nil)
@@ -37,6 +37,10 @@
   :hook ((org-mode . org-cdlatex-mode)))
 
 (add-to-list 'org-latex-packages-alist '("" "tikz" t))
+
+
+(use-package org-superstar
+  :hook (org-mode . org-superstar-mode))
 
 (provide 'init-org)
 ;;; init-org.el ends here
