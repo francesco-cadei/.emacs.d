@@ -45,10 +45,11 @@
 (global-auto-revert-mode)
 
 
-(setq scroll-conservatively 101)
-(setq auto-window-vscroll nil)
+(setq scroll-conservatively 101
+      auto-window-vscroll nil)
 (require 'pixel-scroll)
 (setq pixel-scroll-precision-interpolate-mice nil)
+(setq pixel-scroll-precision-use-momentum t)
 (pixel-scroll-precision-mode)
 
 
